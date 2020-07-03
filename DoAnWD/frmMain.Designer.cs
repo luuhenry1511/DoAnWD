@@ -69,12 +69,11 @@
             this.btnDoanhThu,
             this.barButtonItem9});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 12;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1497, 206);
+            this.ribbonControl1.Size = new System.Drawing.Size(917, 143);
             // 
             // btnDangKy
             // 
@@ -88,64 +87,64 @@
             // 
             this.btnDangXuat.Caption = "Đăng xuất";
             this.btnDangXuat.Id = 2;
-            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.btnDangXuat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.btnDangXuat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.Image")));
+            this.btnDangXuat.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.ImageOptions.LargeImage")));
             this.btnDangXuat.Name = "btnDangXuat";
             // 
             // btnNhanVien
             // 
             this.btnNhanVien.Caption = "Nhân viên";
             this.btnNhanVien.Id = 4;
-            this.btnNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.btnNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnNhanVien.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.ImageOptions.Image")));
+            this.btnNhanVien.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.ImageOptions.LargeImage")));
             this.btnNhanVien.Name = "btnNhanVien";
             // 
             // btnThongTinSach
             // 
             this.btnThongTinSach.Caption = "Thông tin sách";
             this.btnThongTinSach.Id = 5;
-            this.btnThongTinSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.btnThongTinSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnThongTinSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinSach.ImageOptions.Image")));
+            this.btnThongTinSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongTinSach.ImageOptions.LargeImage")));
             this.btnThongTinSach.Name = "btnThongTinSach";
             // 
             // btnSach
             // 
             this.btnSach.Caption = "Sách";
             this.btnSach.Id = 6;
-            this.btnSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.btnSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.btnSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSach.ImageOptions.Image")));
+            this.btnSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnSach.ImageOptions.LargeImage")));
             this.btnSach.Name = "btnSach";
             // 
             // btnDonHang
             // 
             this.btnDonHang.Caption = "Đơn hàng";
             this.btnDonHang.Id = 7;
-            this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.btnDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.btnDonHang.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.Image")));
+            this.btnDonHang.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDonHang.ImageOptions.LargeImage")));
             this.btnDonHang.Name = "btnDonHang";
             // 
             // btnNCC
             // 
             this.btnNCC.Caption = "Quản lí Nhà Cung Cấp";
             this.btnNCC.Id = 8;
-            this.btnNCC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.btnNCC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.btnNCC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNCC.ImageOptions.Image")));
+            this.btnNCC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNCC.ImageOptions.LargeImage")));
             this.btnNCC.Name = "btnNCC";
             // 
             // btnNhapSach
             // 
             this.btnNhapSach.Caption = "Nhập sách";
             this.btnNhapSach.Id = 9;
-            this.btnNhapSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.Image")));
-            this.btnNhapSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.btnNhapSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapSach.ImageOptions.Image")));
+            this.btnNhapSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhapSach.ImageOptions.LargeImage")));
             this.btnNhapSach.Name = "btnNhapSach";
             // 
             // btnDoanhThu
             // 
             this.btnDoanhThu.Caption = "Doanh thu";
             this.btnDoanhThu.Id = 10;
-            this.btnDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.Image")));
-            this.btnDoanhThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem8.ImageOptions.LargeImage")));
+            this.btnDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.Image")));
+            this.btnDoanhThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.LargeImage")));
             this.btnDoanhThu.Name = "btnDoanhThu";
             // 
             // barButtonItem9
@@ -217,20 +216,21 @@
             // tabControl1
             // 
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 206);
+            this.tabControl1.Location = new System.Drawing.Point(0, 143);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1497, 489);
+            this.tabControl1.Size = new System.Drawing.Size(917, 333);
             this.tabControl1.TabIndex = 1;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1497, 695);
+            this.ClientSize = new System.Drawing.Size(917, 476);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "QUẢN LÍ TIỆM SÁCH TRI THỨC";
