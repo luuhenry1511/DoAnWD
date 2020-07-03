@@ -13,9 +13,14 @@ namespace DoAnWD
 {
     public partial class frmDangNhap : DevExpress.XtraEditors.XtraForm
     {
-        public frmDangNhap()
+        public frmDangNhap(frmMain frmMain)
         {
             InitializeComponent();
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
