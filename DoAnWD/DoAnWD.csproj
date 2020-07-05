@@ -82,6 +82,15 @@
     <Compile Include="frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="Moduls\XLBANG.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Moduls\NHANVIEN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Moduls\XLSACH.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="frmDangNhap.cs">

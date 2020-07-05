@@ -11,6 +11,8 @@ namespace DoAnWD
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        internal string maNV;
+
         public frmMain()
         {
             InitializeComponent();
