@@ -106,6 +106,7 @@ namespace DoAnWD
             tabControlMain.TabPages.RemoveAt(vitri);
         }
 
+
         private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int index = tabControlMain.TabPages.IndexOfKey("Quản lí nv");
@@ -127,5 +128,25 @@ namespace DoAnWD
             }
         }
 
+        private void btnNCC_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("Quản lí ncc");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmNhaCungCap f = new frmNhaCungCap();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "Quản lí ncc";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+
+                f.Show();
+            }
+        }
     }
 }
