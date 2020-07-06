@@ -41,7 +41,7 @@ namespace DoAnWD
                 this.Close();
             }
             else
-                MessageBox.Show("Sai tên tài khoản và mật khẩu!!!");
+                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!!!");
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -55,6 +55,13 @@ namespace DoAnWD
             {
                 btnLogin_Click(sender, e);
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) //show pass
+        {
+            if (checkBox1.Checked) txtMatKhau.UseSystemPasswordChar = false;
+
+            else txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }

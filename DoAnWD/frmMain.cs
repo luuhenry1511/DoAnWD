@@ -72,5 +72,32 @@ namespace DoAnWD
         {
 
         }
+
+        private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            this.Hide();
+            frmDangNhap f = new frmDangNhap(this);
+            f.ShowDialog();
+        }
+
+        private void btnSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("frmSach");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmSach f = new frmSach();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "frmSach";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+                f.Show();
+            }
+        }
     }
 }

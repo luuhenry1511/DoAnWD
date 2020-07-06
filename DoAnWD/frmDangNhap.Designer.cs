@@ -37,6 +37,8 @@
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -44,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(206, 34);
+            this.label1.Location = new System.Drawing.Point(224, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 24);
             this.label1.TabIndex = 0;
@@ -82,12 +84,13 @@
             this.txtMatKhau.Location = new System.Drawing.Point(255, 139);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(204, 27);
-            this.txtMatKhau.TabIndex = 1;
+            this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // btnHuy
             // 
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(290, 205);
+            this.btnHuy.Location = new System.Drawing.Point(309, 147);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(111, 42);
             this.btnHuy.TabIndex = 3;
@@ -97,7 +100,7 @@
             // btnLogin
             // 
             this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(104, 205);
+            this.btnLogin.Location = new System.Drawing.Point(68, 147);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 42);
             this.btnLogin.TabIndex = 2;
@@ -108,19 +111,31 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(49, 75);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnHuy);
+            this.panel1.Controls.Add(this.checkBox1);
+            this.panel1.Location = new System.Drawing.Point(38, 76);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(432, 202);
+            this.panel1.Size = new System.Drawing.Size(480, 232);
             this.panel1.TabIndex = 4;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(329, 104);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(146, 23);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "Show password";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // frmDangNhap
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 358);
-            this.Controls.Add(this.btnHuy);
-            this.Controls.Add(this.btnLogin);
+            this.ClientSize = new System.Drawing.Size(555, 362);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label2);
@@ -130,6 +145,8 @@
             this.Name = "frmDangNhap";
             this.Text = "Đăng nhập";
             this.Load += new System.EventHandler(this.frmDangNhap_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,5 +162,6 @@
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
