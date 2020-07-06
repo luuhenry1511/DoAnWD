@@ -17,5 +17,10 @@ namespace DoAnWD
         {
             InitializeComponent();
         }
+
+        private void frmDangKi_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
