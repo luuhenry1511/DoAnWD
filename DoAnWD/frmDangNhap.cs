@@ -34,7 +34,7 @@ namespace DoAnWD
             if (r.Count() > 0)
             {
                 frmMain f = (frmMain)this.MdiParent;
-                fMain.Text = "Quản lí Nhà Sách - Chào " + r[0]["TenNV"].ToString();
+                fMain.Text = "Tiệm sách Tri Thức - Chào " + r[0]["TenNV"].ToString();
                 fMain.maNV = r[0]["MaNV"].ToString();
                 fMain.enableControl((int)r[0]["MaLTK"]);
 

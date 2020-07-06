@@ -81,6 +81,7 @@ namespace DoAnWD
             f.ShowDialog();
         }
 
+    
         private void btnSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int index = tabControlMain.TabPages.IndexOfKey("frmSach");
