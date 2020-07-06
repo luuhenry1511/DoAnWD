@@ -107,6 +107,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Location = new System.Drawing.Point(49, 75);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(432, 202);

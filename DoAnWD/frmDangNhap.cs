@@ -24,7 +24,7 @@ namespace DoAnWD
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            
+            panel1.BackColor = Color.LightGray;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
