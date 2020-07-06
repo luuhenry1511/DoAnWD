@@ -30,14 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSach));
             this.dgvDSSach = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gTTSach = new System.Windows.Forms.GroupBox();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
@@ -48,7 +40,6 @@
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
             this.cboTheLoai = new System.Windows.Forms.ComboBox();
             this.cboKeSach = new System.Windows.Forms.ComboBox();
-            this.cboNhaXuatBan = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,6 +59,19 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.pHinh = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtNamXB = new System.Windows.Forms.TextBox();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NamXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtNhaXB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSach)).BeginInit();
             this.gTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
@@ -81,9 +85,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDSSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
             this.Column1,
             this.Column2,
             this.Column3,
+            this.NamXB,
             this.Column4,
             this.Column5,
             this.Column6,
@@ -96,66 +102,6 @@
             this.dgvDSSach.Size = new System.Drawing.Size(1202, 284);
             this.dgvDSSach.TabIndex = 15;
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaSach";
-            this.Column1.HeaderText = "Mã Sách";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 70;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenSach";
-            this.Column2.HeaderText = "Tên Sách";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TheLoai";
-            this.Column3.HeaderText = "Thể loại";
-            this.Column3.MinimumWidth = 3;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 50;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "NhaXB";
-            this.Column4.HeaderText = "Nhà Xuất Bản";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "KeSach";
-            this.Column5.HeaderText = "Kệ Sách";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "SoLuong";
-            this.Column6.HeaderText = "Số Lượng";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "DonGia";
-            this.Column7.HeaderText = "Đơn Giá";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "GiaGoc";
-            this.Column8.HeaderText = "Giá Gốc";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
             // gTTSach
             // 
             this.gTTSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -165,20 +111,22 @@
             this.gTTSach.Controls.Add(this.simpleButton2);
             this.gTTSach.Controls.Add(this.simpleButton1);
             this.gTTSach.Controls.Add(this.txtGiaGoc);
+            this.gTTSach.Controls.Add(this.txtNamXB);
             this.gTTSach.Controls.Add(this.txtDonGia);
             this.gTTSach.Controls.Add(this.nudSoLuong);
             this.gTTSach.Controls.Add(this.cboTheLoai);
             this.gTTSach.Controls.Add(this.cboKeSach);
-            this.gTTSach.Controls.Add(this.cboNhaXuatBan);
             this.gTTSach.Controls.Add(this.label6);
             this.gTTSach.Controls.Add(this.label5);
             this.gTTSach.Controls.Add(this.label9);
             this.gTTSach.Controls.Add(this.label8);
+            this.gTTSach.Controls.Add(this.label10);
             this.gTTSach.Controls.Add(this.label4);
             this.gTTSach.Controls.Add(this.txtTenSach);
             this.gTTSach.Controls.Add(this.label3);
             this.gTTSach.Controls.Add(this.label2);
             this.gTTSach.Controls.Add(this.label1);
+            this.gTTSach.Controls.Add(this.txtNhaXB);
             this.gTTSach.Controls.Add(this.txtMaSach);
             this.gTTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTSach.Location = new System.Drawing.Point(10, 86);
@@ -229,10 +177,10 @@
             // txtGiaGoc
             // 
             this.txtGiaGoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtGiaGoc.Location = new System.Drawing.Point(852, 143);
+            this.txtGiaGoc.Location = new System.Drawing.Point(841, 149);
             this.txtGiaGoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaGoc.Name = "txtGiaGoc";
-            this.txtGiaGoc.Size = new System.Drawing.Size(90, 26);
+            this.txtGiaGoc.Size = new System.Drawing.Size(103, 26);
             this.txtGiaGoc.TabIndex = 18;
             // 
             // txtDonGia
@@ -247,7 +195,7 @@
             // nudSoLuong
             // 
             this.nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nudSoLuong.Location = new System.Drawing.Point(860, 98);
+            this.nudSoLuong.Location = new System.Drawing.Point(855, 108);
             this.nudSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(76, 26);
@@ -272,17 +220,6 @@
             this.cboKeSach.Name = "cboKeSach";
             this.cboKeSach.Size = new System.Drawing.Size(126, 28);
             this.cboKeSach.TabIndex = 14;
-            // 
-            // cboNhaXuatBan
-            // 
-            this.cboNhaXuatBan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cboNhaXuatBan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNhaXuatBan.FormattingEnabled = true;
-            this.cboNhaXuatBan.Location = new System.Drawing.Point(603, 57);
-            this.cboNhaXuatBan.Margin = new System.Windows.Forms.Padding(4);
-            this.cboNhaXuatBan.Name = "cboNhaXuatBan";
-            this.cboNhaXuatBan.Size = new System.Drawing.Size(252, 28);
-            this.cboNhaXuatBan.TabIndex = 11;
             // 
             // label6
             // 
@@ -310,7 +247,7 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(759, 110);
+            this.label9.Location = new System.Drawing.Point(748, 110);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 20);
@@ -321,7 +258,7 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(758, 153);
+            this.label8.Location = new System.Drawing.Point(752, 153);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 20);
@@ -332,7 +269,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(459, 161);
+            this.label4.Location = new System.Drawing.Point(459, 149);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
@@ -483,6 +420,7 @@
             this.btnThem.Size = new System.Drawing.Size(112, 56);
             this.btnThem.TabIndex = 25;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // pHinh
             // 
@@ -494,6 +432,110 @@
             this.pHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pHinh.TabIndex = 16;
             this.pHinh.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(459, 190);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(130, 20);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Năm xuất bản:";
+            // 
+            // txtNamXB
+            // 
+            this.txtNamXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNamXB.Location = new System.Drawing.Point(603, 190);
+            this.txtNamXB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNamXB.Name = "txtNamXB";
+            this.txtNamXB.Size = new System.Drawing.Size(130, 26);
+            this.txtNamXB.TabIndex = 17;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaSach";
+            this.Column1.HeaderText = "Mã Sách";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenSach";
+            this.Column2.HeaderText = "Tên Sách";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "TheLoai";
+            this.Column3.HeaderText = "Thể loại";
+            this.Column3.MinimumWidth = 3;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 50;
+            // 
+            // NamXB
+            // 
+            this.NamXB.DataPropertyName = "NamXB";
+            this.NamXB.HeaderText = "Năm Xuất Bản";
+            this.NamXB.Name = "NamXB";
+            this.NamXB.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "NhaXB";
+            this.Column4.HeaderText = "Nhà Xuất Bản";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "KeSach";
+            this.Column5.HeaderText = "Kệ Sách";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "SoLuong";
+            this.Column6.HeaderText = "Số Lượng";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "DonGia";
+            this.Column7.HeaderText = "Đơn Giá";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "GiaGoc";
+            this.Column8.HeaderText = "Giá Gốc";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // txtNhaXB
+            // 
+            this.txtNhaXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNhaXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhaXB.Location = new System.Drawing.Point(603, 51);
+            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNhaXB.MaxLength = 10;
+            this.txtNhaXB.Name = "txtNhaXB";
+            this.txtNhaXB.Size = new System.Drawing.Size(260, 26);
+            this.txtNhaXB.TabIndex = 0;
             // 
             // frmSach
             // 
@@ -519,6 +561,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSach";
             this.Text = "frmSach";
+            this.Load += new System.EventHandler(this.frmSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSach)).EndInit();
             this.gTTSach.ResumeLayout(false);
             this.gTTSach.PerformLayout();
@@ -533,7 +576,6 @@
         private System.Windows.Forms.PictureBox pHinh;
         private System.Windows.Forms.DataGridView dgvDSSach;
         private System.Windows.Forms.GroupBox gTTSach;
-        private System.Windows.Forms.ComboBox cboNhaXuatBan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -555,19 +597,24 @@
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnChonHinh;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.TextBox txtGiaGoc;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.TextBox txtNamXB;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NamXB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.TextBox txtNhaXB;
     }
 }

@@ -104,6 +104,8 @@ namespace DoAnWD
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (vitri == -1) MessageBox.Show("Hiện không mở form nào");
+            else
             tabControlMain.TabPages.RemoveAt(vitri);
         }
 

@@ -85,7 +85,7 @@
     <Compile Include="Moduls\XLBANG.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Moduls\NHANVIEN.cs">
+    <Compile Include="Moduls\XLNHANVIEN.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Moduls\XLSACH.cs">
