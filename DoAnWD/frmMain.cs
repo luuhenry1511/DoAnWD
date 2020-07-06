@@ -11,6 +11,7 @@ namespace DoAnWD
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        int vitri;
         internal string maNV;
 
         public frmMain()
@@ -70,7 +71,7 @@ namespace DoAnWD
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            vitri = tabControlMain.SelectedIndex;
         }
 
         private void btnDangXuat_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -99,5 +100,32 @@ namespace DoAnWD
                 f.Show();
             }
         }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            tabControlMain.TabPages.RemoveAt(vitri);
+        }
+
+        private void btnNhanVien_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("Quản lí nv");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmNhanVien f = new frmNhanVien();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "Quản lí nv";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+                
+                f.Show();
+            }
+        }
+
     }
 }

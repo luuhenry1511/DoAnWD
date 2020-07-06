@@ -24,7 +24,7 @@ namespace DoAnWD
 
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
-            panel1.BackColor = Color.LightGray;
+            panel1.BackColor = Color.FromArgb(70,Color.Black);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -62,6 +62,11 @@ namespace DoAnWD
             if (checkBox1.Checked) txtMatKhau.UseSystemPasswordChar = false;
 
             else txtMatKhau.UseSystemPasswordChar = true;
+        }
+
+        private void btnQuentk_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Vui lòng liên hệ quản trị viên để khôi phục tài khoản!");
         }
     }
 }

@@ -18,7 +18,7 @@ namespace DoAnWD
             InitializeComponent();
         }
 
-        private void gTTSinhVien_Enter(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
 
         }

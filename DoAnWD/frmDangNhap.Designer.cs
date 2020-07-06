@@ -38,17 +38,18 @@
             this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnQuentk = new DevExpress.XtraEditors.SimpleButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(224, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 24);
+            this.label1.Size = new System.Drawing.Size(142, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng nhập";
             // 
@@ -90,7 +91,7 @@
             // btnHuy
             // 
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(309, 147);
+            this.btnHuy.Location = new System.Drawing.Point(310, 224);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(111, 42);
             this.btnHuy.TabIndex = 3;
@@ -100,7 +101,7 @@
             // btnLogin
             // 
             this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(68, 147);
+            this.btnLogin.Location = new System.Drawing.Point(58, 224);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(118, 42);
             this.btnLogin.TabIndex = 2;
@@ -110,19 +111,19 @@
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.checkBox1);
-            this.panel1.Location = new System.Drawing.Point(38, 76);
+            this.panel1.Location = new System.Drawing.Point(42, 26);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 232);
+            this.panel1.Size = new System.Drawing.Size(476, 282);
             this.panel1.TabIndex = 4;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(329, 104);
+            this.checkBox1.ForeColor = System.Drawing.Color.White;
+            this.checkBox1.Location = new System.Drawing.Point(275, 164);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(146, 23);
             this.checkBox1.TabIndex = 0;
@@ -130,12 +131,22 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // btnQuentk
+            // 
+            this.btnQuentk.Location = new System.Drawing.Point(433, 314);
+            this.btnQuentk.Name = "btnQuentk";
+            this.btnQuentk.Size = new System.Drawing.Size(121, 36);
+            this.btnQuentk.TabIndex = 5;
+            this.btnQuentk.Text = "Quên tài khoản";
+            this.btnQuentk.Click += new System.EventHandler(this.btnQuentk_Click);
+            // 
             // frmDangNhap
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 362);
+            this.Controls.Add(this.btnQuentk);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.label2);
@@ -163,5 +174,6 @@
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox checkBox1;
+        private DevExpress.XtraEditors.SimpleButton btnQuentk;
     }
 }
