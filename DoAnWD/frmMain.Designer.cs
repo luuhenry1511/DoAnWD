@@ -37,7 +37,6 @@
             this.btnSach = new DevExpress.XtraBars.BarButtonItem();
             this.btnDonHang = new DevExpress.XtraBars.BarButtonItem();
             this.btnNCC = new DevExpress.XtraBars.BarButtonItem();
-            this.btnNhapSach = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoanhThu = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -67,17 +66,15 @@
             this.btnSach,
             this.btnDonHang,
             this.btnNCC,
-            this.btnNhapSach,
             this.btnDoanhThu,
             this.barButtonItem9,
             this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1416, 206);
+            this.ribbonControl1.Size = new System.Drawing.Size(917, 143);
             // 
             // btnDangKy
             // 
@@ -138,14 +135,6 @@
             this.btnNCC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNCC.ImageOptions.LargeImage")));
             this.btnNCC.Name = "btnNCC";
             this.btnNCC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNCC_ItemClick);
-            // 
-            // btnNhapSach
-            // 
-            this.btnNhapSach.Caption = "Nhập sách";
-            this.btnNhapSach.Id = 9;
-            this.btnNhapSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapSach.ImageOptions.Image")));
-            this.btnNhapSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNhapSach.ImageOptions.LargeImage")));
-            this.btnNhapSach.Name = "btnNhapSach";
             // 
             // btnDoanhThu
             // 
@@ -215,7 +204,6 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.btnNCC);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnNhapSach);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             this.ribbonPageGroup5.Text = "Quản lí nhập";
             // 
@@ -240,21 +228,21 @@
             // tabControlMain
             // 
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControlMain.Location = new System.Drawing.Point(0, 206);
+            this.tabControlMain.Location = new System.Drawing.Point(0, 143);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControlMain.Name = "tabControlMain";
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(1416, 525);
+            this.tabControlMain.Size = new System.Drawing.Size(917, 357);
             this.tabControlMain.TabIndex = 1;
             this.tabControlMain.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1416, 731);
+            this.ClientSize = new System.Drawing.Size(917, 500);
             this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "QUẢN LÍ TIỆM SÁCH TRI THỨC";
@@ -277,7 +265,6 @@
         private DevExpress.XtraBars.BarButtonItem btnSach;
         private DevExpress.XtraBars.BarButtonItem btnDonHang;
         private DevExpress.XtraBars.BarButtonItem btnNCC;
-        private DevExpress.XtraBars.BarButtonItem btnNhapSach;
         private DevExpress.XtraBars.BarButtonItem btnDoanhThu;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
