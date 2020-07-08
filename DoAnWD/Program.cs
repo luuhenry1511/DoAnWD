@@ -19,7 +19,7 @@ namespace DoAnWD
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
-            Application.Run(new frmDangKi());
+            Application.Run(new frmMain());
         }
     }
 }
