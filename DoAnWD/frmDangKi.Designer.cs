@@ -54,10 +54,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(103, 45);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 29);
+            this.label1.Size = new System.Drawing.Size(352, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Đăng kí tài khoản nhân viên";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Đăng ký tài khoản nhân viên";
             // 
             // label4
             // 
@@ -225,7 +224,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangKi";
-            this.Text = "DangKi";
+            this.Text = "DangKy";
             this.Load += new System.EventHandler(this.frmDangKi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
