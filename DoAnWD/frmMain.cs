@@ -78,21 +78,20 @@ namespace DoAnWD
         {
             this.Hide();
             frmDangNhap f = new frmDangNhap(this);
-         
             this.ShowDialog();
         }
 
     
         private void btnSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            int index = tabControlMain.TabPages.IndexOfKey("frmSach");
+            int index = tabControlMain.TabPages.IndexOfKey("QuanLiSach");
             if (index >= 0)
                 tabControlMain.SelectedIndex = index;
             else
             {
                 frmSach f = new frmSach();
                 TabPage p = new TabPage(f.Text);
-                p.Name = "frmSach";
+                p.Name = "QuanLiSach";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;
@@ -162,7 +161,7 @@ namespace DoAnWD
             {
                 frmHoaDon f = new frmHoaDon();
                 TabPage p = new TabPage(f.Text);
-                p.Name = "Quản lí hóa đơn";
+                p.Name = "QuanLiDonHang";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;

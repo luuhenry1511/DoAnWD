@@ -92,7 +92,10 @@ namespace DoAnWD
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            
+            SACH.EndCurrentEdit();
+            tblSACH.ghi();
+            capnhat = false;
+            enaButton();
         }
     }
 }
