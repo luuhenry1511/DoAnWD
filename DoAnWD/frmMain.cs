@@ -36,9 +36,9 @@ namespace DoAnWD
                     btnDangXuat.Enabled = true;
                     btnDangKy.Enabled = true;
                     btnNhanVien.Enabled = true;
-                    btnThongTinSach.Enabled = true;
+                    btnThongTinSach.Enabled = false;
                     btnSach.Enabled = true;
-                    btnDonHang.Enabled = true;
+                    btnDonHang.Enabled = false;
                     btnNCC.Enabled = true;
                    
                     btnDoanhThu.Enabled = true;
@@ -78,7 +78,8 @@ namespace DoAnWD
         {
             this.Hide();
             frmDangNhap f = new frmDangNhap(this);
-            f.ShowDialog();
+         
+            this.ShowDialog();
         }
 
     
@@ -141,6 +142,48 @@ namespace DoAnWD
                 frmNhaCungCap f = new frmNhaCungCap();
                 TabPage p = new TabPage(f.Text);
                 p.Name = "Quản lí ncc";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+
+                f.Show();
+            }
+        }
+
+        private void btnDonHang_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("Quanlidonhang");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmHoaDon f = new frmHoaDon();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "Quản lí hóa đơn";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+
+                f.Show();
+            }
+        }
+
+        private void btnDangKy_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("DangKi");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmDangKi f = new frmDangKi();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "DangKi";
                 f.TopLevel = false;
                 p.Controls.Add(f);
                 f.Dock = DockStyle.Fill;

@@ -16,6 +16,8 @@ namespace DoAnWD
     public partial class frmSach : DevExpress.XtraEditors.XtraForm
     {
         XLSACH tblSACH;
+        XLTHELOAI tblTHELOAI;
+        XLKESACH tblKESACH;
         BindingManagerBase SACH;
         bool capnhat = false;
         public frmSach()
@@ -36,18 +38,22 @@ namespace DoAnWD
         }
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
         }
 
         private void frmSach_Load(object sender, EventArgs e)
         {
             tblSACH = new XLSACH();
+            tblTHELOAI = new XLTHELOAI();
+            tblKESACH = new XLKESACH();
             LoadDGVSach();
             LoadCBOKeSach();
             LoadCBOTheLoai();
             txtMaSach.DataBindings.Add("text", tblSACH, "MaSach", true);
             txtTenSach.DataBindings.Add("text", tblSACH, "TenSach", true);
-            cboKeSach.DataBindings.Add("text", tblSACH, "KeSach", true);
-            cboTheLoai.DataBindings.Add("text", tblSACH, "TheLoai", true);
+            cboKeSach.DataBindings.Add("SelectedValue", tblSACH, "KeSach", true);
+            cboTheLoai.DataBindings.Add("SelectedValue", tblSACH, "TheLoai", true);
             txtNhaXB.DataBindings.Add("text", tblSACH, "NhaXB", true);
             txtDonGia.DataBindings.Add("text", tblSACH, "DonGia", true);
             txtGiaGoc.DataBindings.Add("text", tblSACH, "GiaGoc", true);
@@ -59,16 +65,16 @@ namespace DoAnWD
 
         private void LoadCBOTheLoai()
         {
-            cboTheLoai.DataSource = tblSACH.;
-            cboTheLoai.DisplayMember = "TheLoai";
-            cboTheLoai.ValueMember = "MaSach";
+            cboTheLoai.DataSource = tblTHELOAI;
+            cboTheLoai.DisplayMember = "TenTheLoai";
+            cboTheLoai.ValueMember = "MaTheLoai";
         }
 
         private void LoadCBOKeSach()
         {
-            cboKeSach.DataSource = tblSACH;
-            cboKeSach.DisplayMember = "KeSach";
-            cboKeSach.ValueMember = "MaSach";
+            cboKeSach.DataSource = tblKESACH;
+            cboKeSach.DisplayMember = "TenKeSach";
+            cboKeSach.ValueMember = "MaKeSach";
         }
 
         private void LoadDGVSach()
@@ -82,6 +88,11 @@ namespace DoAnWD
             SACH.AddNew();
             capnhat = true;
             enaButton();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

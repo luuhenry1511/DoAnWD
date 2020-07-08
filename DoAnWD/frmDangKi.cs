@@ -27,5 +27,11 @@ namespace DoAnWD
         {
 
         }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
     }
 }

@@ -441,9 +441,9 @@
             this.label7.Location = new System.Drawing.Point(495, 26);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(189, 29);
+            this.label7.Size = new System.Drawing.Size(193, 29);
             this.label7.TabIndex = 24;
-            this.label7.Text = "QUẢN LÍ SÁCH";
+            this.label7.Text = "QUẢN LÝ SÁCH";
             // 
             // btnChonHinh
             // 
@@ -464,7 +464,7 @@
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 56);
             this.btnThoat.TabIndex = 30;
-            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Text = "&Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnHuy
@@ -488,6 +488,7 @@
             this.btnLuu.Size = new System.Drawing.Size(112, 56);
             this.btnLuu.TabIndex = 28;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 

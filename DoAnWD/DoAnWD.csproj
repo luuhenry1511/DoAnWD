@@ -99,6 +99,12 @@
     <Compile Include="Moduls\XLNHANVIEN.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Moduls\XLKESACH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Moduls\XLTHELOAI.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Moduls\XLSACH.cs">
       <SubType>Component</SubType>
     </Compile>
