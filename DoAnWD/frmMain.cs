@@ -40,7 +40,7 @@ namespace DoAnWD
                     btnSach.Enabled = true;
                     btnDonHang.Enabled = true;
                     btnNCC.Enabled = true;
-                    btnNhapSach.Enabled = true;
+                   
                     btnDoanhThu.Enabled = true;
                     break;
                 case 2: //Nhan vien bang hang
@@ -51,7 +51,7 @@ namespace DoAnWD
                     btnSach.Enabled = false;
                     btnDonHang.Enabled = true;
                     btnNCC.Enabled = false;
-                    btnNhapSach.Enabled = false;
+                  
                     btnDoanhThu.Enabled = false;
                     break;
             
@@ -63,7 +63,7 @@ namespace DoAnWD
                     btnSach.Enabled = false;
                     btnDonHang.Enabled = false;
                     btnNCC.Enabled = false;
-                    btnNhapSach.Enabled = false;
+                  
                     btnDoanhThu.Enabled = false;
                     break;
             }

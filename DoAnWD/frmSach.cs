@@ -59,7 +59,7 @@ namespace DoAnWD
 
         private void LoadCBOTheLoai()
         {
-            cboTheLoai.DataSource = tblSACH;
+            cboTheLoai.DataSource = tblSACH.;
             cboTheLoai.DisplayMember = "TheLoai";
             cboTheLoai.ValueMember = "MaSach";
         }
