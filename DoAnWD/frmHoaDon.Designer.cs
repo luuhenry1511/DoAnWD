@@ -426,7 +426,7 @@
             this.btnTimKiem.Location = new System.Drawing.Point(620, 398);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(108, 34);
+            this.btnTimKiem.Size = new System.Drawing.Size(118, 34);
             this.btnTimKiem.TabIndex = 42;
             this.btnTimKiem.Text = "Tìm kiếm";
             // 
