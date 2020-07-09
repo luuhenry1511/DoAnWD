@@ -78,7 +78,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(532, 8);
+            this.label1.Location = new System.Drawing.Point(539, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 29);
@@ -90,7 +90,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label2.Location = new System.Drawing.Point(468, 62);
+            this.label2.Location = new System.Drawing.Point(475, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 19);
@@ -101,7 +101,7 @@
             // 
             this.txtNhanVienLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNhanVienLap.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtNhanVienLap.Location = new System.Drawing.Point(454, 101);
+            this.txtNhanVienLap.Location = new System.Drawing.Point(461, 101);
             this.txtNhanVienLap.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhanVienLap.Name = "txtNhanVienLap";
             this.txtNhanVienLap.Size = new System.Drawing.Size(148, 27);
@@ -112,7 +112,7 @@
             this.btnHuyHoaDon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuyHoaDon.Cursor = System.Windows.Forms.Cursors.Cross;
             this.btnHuyHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuyHoaDon.ImageOptions.Image")));
-            this.btnHuyHoaDon.Location = new System.Drawing.Point(849, 229);
+            this.btnHuyHoaDon.Location = new System.Drawing.Point(856, 229);
             this.btnHuyHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuyHoaDon.Name = "btnHuyHoaDon";
             this.btnHuyHoaDon.Size = new System.Drawing.Size(137, 64);
@@ -125,7 +125,7 @@
             this.deNgayLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.deNgayLap.Cursor = System.Windows.Forms.Cursors.Cross;
             this.deNgayLap.EditValue = null;
-            this.deNgayLap.Location = new System.Drawing.Point(588, 60);
+            this.deNgayLap.Location = new System.Drawing.Point(595, 60);
             this.deNgayLap.Margin = new System.Windows.Forms.Padding(4);
             this.deNgayLap.Name = "deNgayLap";
             this.deNgayLap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -152,7 +152,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(-1, 452);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1209, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(1222, 230);
             this.dataGridView1.TabIndex = 6;
             // 
             // Column1
@@ -202,7 +202,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label3.Location = new System.Drawing.Point(334, 104);
+            this.label3.Location = new System.Drawing.Point(341, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 19);
@@ -214,7 +214,7 @@
             this.btnLapHoaDon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLapHoaDon.Cursor = System.Windows.Forms.Cursors.Cross;
             this.btnLapHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLapHoaDon.ImageOptions.Image")));
-            this.btnLapHoaDon.Location = new System.Drawing.Point(849, 139);
+            this.btnLapHoaDon.Location = new System.Drawing.Point(856, 139);
             this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnLapHoaDon.Name = "btnLapHoaDon";
             this.btnLapHoaDon.Size = new System.Drawing.Size(137, 72);
@@ -232,7 +232,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(165, 136);
+            this.groupBox1.Location = new System.Drawing.Point(172, 136);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -334,7 +334,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label6.Location = new System.Drawing.Point(630, 104);
+            this.label6.Location = new System.Drawing.Point(637, 104);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 19);
@@ -345,7 +345,7 @@
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.textBox1.Location = new System.Drawing.Point(750, 101);
+            this.textBox1.Location = new System.Drawing.Point(757, 101);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(103, 27);
@@ -355,7 +355,7 @@
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(1012, 230);
+            this.btnThoat.Location = new System.Drawing.Point(1019, 230);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(134, 70);
@@ -366,7 +366,7 @@
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(849, 301);
+            this.btnLuu.Location = new System.Drawing.Point(856, 301);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(137, 66);
@@ -377,7 +377,7 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(1012, 139);
+            this.btnSua.Location = new System.Drawing.Point(1019, 139);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(134, 72);
@@ -445,7 +445,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 696);
+            this.ClientSize = new System.Drawing.Size(1224, 684);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.simpleButton4);

@@ -72,6 +72,7 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.pHinh = new System.Windows.Forms.PictureBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSach)).BeginInit();
             this.gTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
@@ -180,6 +181,7 @@
             // 
             this.gTTSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gTTSach.Controls.Add(this.maskedTextBox1);
             this.gTTSach.Controls.Add(this.txtGiaGoc);
             this.gTTSach.Controls.Add(this.txtNamXB);
             this.gTTSach.Controls.Add(this.txtDonGia);
@@ -388,7 +390,7 @@
             // 
             this.txtMaSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSach.Location = new System.Drawing.Point(158, 53);
+            this.txtMaSach.Location = new System.Drawing.Point(158, 0);
             this.txtMaSach.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSach.MaxLength = 10;
             this.txtMaSach.Name = "txtMaSach";
@@ -535,6 +537,14 @@
             this.pHinh.TabIndex = 16;
             this.pHinh.TabStop = false;
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(158, 51);
+            this.maskedTextBox1.Mask = "S0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
+            this.maskedTextBox1.TabIndex = 19;
+            // 
             // frmSach
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -618,5 +628,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.TextBox txtNhaXB;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
     }
 }
