@@ -22,5 +22,10 @@ namespace DoAnWD
         {
 
         }
+
+        private void txtNamXB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

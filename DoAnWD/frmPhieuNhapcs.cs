@@ -11,11 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace DoAnWD
 {
-    public partial class frmTimKiemHoaDon : DevExpress.XtraEditors.XtraForm
+    public partial class frmPhieuNhapcs : DevExpress.XtraEditors.XtraForm
     {
-        public frmTimKiemHoaDon()
+        public frmPhieuNhapcs()
         {
             InitializeComponent();
+        }
+
+        private void gTTSach_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
