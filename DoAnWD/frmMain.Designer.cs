@@ -70,12 +70,13 @@
             this.barButtonItem9,
             this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbonControl1.MaxItemId = 13;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.Size = new System.Drawing.Size(1376, 206);
+          
             // 
             // btnDangKy
             // 
@@ -244,7 +245,7 @@
             this.ClientSize = new System.Drawing.Size(1376, 731);
             this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.ribbonControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.Text = "QUẢN LÝ TIỆM SÁCH TRI THỨC";

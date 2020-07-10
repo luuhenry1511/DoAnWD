@@ -26,6 +26,7 @@ namespace DoAnWD
             f.StartPosition = FormStartPosition.CenterScreen;
             f.ShowDialog();
             f.WindowState = FormWindowState.Normal;
+            tabControlMain.TabPages.Clear(); //dong tat ca tab con khi mo lai form Main
 
         }
         public void enableControl(int maLTK)
@@ -193,5 +194,7 @@ namespace DoAnWD
                 f.Show();
             }
         }
+
+      
     }
 }
