@@ -129,7 +129,13 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
+            if (MessageBox.Show("Bạn có muốn xóa sách "+ txtTenSach.Text+ " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                
+                SACH.RemoveAt(SACH.Position);
+                tblSACH.ghi();
+                MessageBox.Show("Xóa thành công!");
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -140,7 +146,19 @@ namespace DoAnWD
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            SACH.CancelCurrentEdit();
+            tblSACH.RejectChanges();
+            capnhat = false;
+            enaButton();
+        }
 
+        private void btnChonHinh_Click(object sender, EventArgs e)
+        {
+            DialogChonhinh.Filter = "JPG Files|*.jpg|PNG Files|*.png| All Files|*.*";
+            if (DialogChonhinh.ShowDialog() == DialogResult.OK)
+            {
+                pHinh.ImageLocation = DialogChonhinh.FileName;
+            }
         }
     }
 }
