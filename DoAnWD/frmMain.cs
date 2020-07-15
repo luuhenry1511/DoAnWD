@@ -195,6 +195,25 @@ namespace DoAnWD
             }
         }
 
-      
+        private void btnThongTinSach_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("TimSach");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                frmTimKiemSach f = new frmTimKiemSach();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "TimSach";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+
+                f.Show();
+            }
+        }
     }
 }

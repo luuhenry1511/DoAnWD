@@ -112,6 +112,7 @@
             this.btnThongTinSach.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThongTinSach.ImageOptions.Image")));
             this.btnThongTinSach.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnThongTinSach.ImageOptions.LargeImage")));
             this.btnThongTinSach.Name = "btnThongTinSach";
+            this.btnThongTinSach.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThongTinSach_ItemClick);
             // 
             // btnSach
             // 
