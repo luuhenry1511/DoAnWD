@@ -59,6 +59,7 @@ namespace DoAnWD
             txtGiaGoc.DataBindings.Add("text", tblSACH, "GiaGoc", true);
             nudSoLuong.DataBindings.Add("value", tblSACH, "SoLuong", true);
             txtNamXB.DataBindings.Add("text", tblSACH, "NamXB", true);
+            pHinh.DataBindings.Add("Image", tblSACH, "Hinh", true);
             SACH = this.BindingContext[tblSACH];
             enaButton();
         }
@@ -118,6 +119,28 @@ namespace DoAnWD
         private void btnLast_Click(object sender, EventArgs e)
         {
             SACH.Position = SACH.Count - 1;
+        }
+
+        private void dgvDSSach_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvDSSach.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            capnhat = true;
+            enaButton();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
