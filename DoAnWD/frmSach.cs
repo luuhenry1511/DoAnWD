@@ -97,5 +97,27 @@ namespace DoAnWD
             capnhat = false;
             enaButton();
         }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            SACH.Position = 0;
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (SACH.Position > 0)
+                SACH.Position -= 1;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (SACH.Position < SACH.Count - 1)
+                SACH.Position += 1;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            SACH.Position = SACH.Count - 1;
+        }
     }
 }

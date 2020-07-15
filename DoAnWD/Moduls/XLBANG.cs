@@ -10,8 +10,9 @@ namespace DoAnWD.Moduls
 {
     class XLBANG: DataTable
     {                                   //Ten server sql cua Luu: DESKTOP-RD7GGH3
+                                        // NGUYENTHIQUYNH
         #region Fields
-        public static string cnnStr = "Data Source=DESKTOP-RD7GGH3\\SQLEXPRESS;Initial Catalog=DOAN_WD;Integrated Security=True";
+        public static string cnnStr = "Data Source=NGUYENTHIQUYNH\\SQLEXPRESS;Initial Catalog=DOAN_WD;Integrated Security=True";
         private static SqlConnection _cnn;
         private SqlDataAdapter _da = new SqlDataAdapter();
         private string _query; // Cau truy van

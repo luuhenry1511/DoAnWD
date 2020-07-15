@@ -41,6 +41,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gTTSach = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.txtGiaGoc = new System.Windows.Forms.TextBox();
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -59,10 +60,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtNhaXB = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
             this.label7 = new System.Windows.Forms.Label();
             this.btnChonHinh = new DevExpress.XtraEditors.SimpleButton();
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
@@ -72,7 +73,6 @@
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
             this.pHinh = new System.Windows.Forms.PictureBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSach)).BeginInit();
             this.gTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
@@ -206,6 +206,14 @@
             this.gTTSach.TabIndex = 12;
             this.gTTSach.TabStop = false;
             this.gTTSach.Text = "Thông tin Sách ";
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(158, 51);
+            this.maskedTextBox1.Mask = "S0000";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox1.TabIndex = 19;
             // 
             // txtGiaGoc
             // 
@@ -377,45 +385,49 @@
             this.txtMaSach.Size = new System.Drawing.Size(175, 20);
             this.txtMaSach.TabIndex = 0;
             // 
-            // simpleButton4
+            // btnLast
             // 
-            this.simpleButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(123, 216);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(31, 23);
-            this.simpleButton4.TabIndex = 19;
+            this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.btnLast.Location = new System.Drawing.Point(123, 216);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(31, 23);
+            this.btnLast.TabIndex = 19;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
-            // simpleButton3
+            // btnNext
             // 
-            this.simpleButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(88, 216);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(31, 23);
-            this.simpleButton3.TabIndex = 19;
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnNext.Location = new System.Drawing.Point(88, 216);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(31, 23);
+            this.btnNext.TabIndex = 19;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // simpleButton2
+            // btnPrevious
             // 
-            this.simpleButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(53, 216);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(31, 23);
-            this.simpleButton2.TabIndex = 19;
+            this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(53, 216);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(31, 23);
+            this.btnPrevious.TabIndex = 19;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // simpleButton1
+            // btnFirst
             // 
-            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(17, 216);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(31, 23);
-            this.simpleButton1.TabIndex = 19;
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnFirst.Location = new System.Drawing.Point(17, 216);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(31, 23);
+            this.btnFirst.TabIndex = 19;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // label7
             // 
@@ -512,14 +524,6 @@
             this.pHinh.TabIndex = 16;
             this.pHinh.TabStop = false;
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(158, 51);
-            this.maskedTextBox1.Mask = "S0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox1.TabIndex = 19;
-            // 
             // frmSach
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -529,12 +533,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 514);
-            this.Controls.Add(this.simpleButton4);
+            this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnChonHinh);
-            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnFirst);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
@@ -585,10 +589,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtGiaGoc;
         private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnPrevious;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
