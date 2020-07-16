@@ -70,8 +70,8 @@ namespace DoAnWD
         {
             string std = string.Format("TenSach like '%{0}%'", txtNhap.Text);
             tblSACH.DefaultView.RowFilter = std;
-            string std2 = string.Format("NhaXB like '%{0}%'", txtNhap.Text);
-            tblSACH.DefaultView.RowFilter = std2;
+            //string std2 = string.Format("NhaXB like '%{0}%'", txtNhap.Text);
+            //tblSACH.DefaultView.RowFilter = std2;
         }
     }
 }

@@ -36,7 +36,7 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
@@ -74,9 +74,10 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(315, 15);
+            this.label7.Location = new System.Drawing.Point(472, 22);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(176, 19);
+            this.label7.Size = new System.Drawing.Size(265, 29);
             this.label7.TabIndex = 35;
             this.label7.Text = "QUẢN LÍ NHÂN VIÊN";
             this.label7.Click += new System.EventHandler(this.label7_Click);
@@ -96,10 +97,11 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvDSNhanVien.Location = new System.Drawing.Point(117, 300);
+            this.dgvDSNhanVien.Location = new System.Drawing.Point(176, 438);
+            this.dgvDSNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDSNhanVien.Name = "dgvDSNhanVien";
             this.dgvDSNhanVien.ReadOnly = true;
-            this.dgvDSNhanVien.Size = new System.Drawing.Size(481, 194);
+            this.dgvDSNhanVien.Size = new System.Drawing.Size(722, 284);
             this.dgvDSNhanVien.TabIndex = 33;
             // 
             // gTTSach
@@ -111,7 +113,7 @@
             this.gTTSach.Controls.Add(this.simpleButton3);
             this.gTTSach.Controls.Add(this.simpleButton2);
             this.gTTSach.Controls.Add(this.simpleButton1);
-            this.gTTSach.Controls.Add(this.dateTimePicker1);
+            this.gTTSach.Controls.Add(this.dateNgaySinh);
             this.gTTSach.Controls.Add(this.txtDiaChi);
             this.gTTSach.Controls.Add(this.txtEmail);
             this.gTTSach.Controls.Add(this.txtSDT);
@@ -127,9 +129,11 @@
             this.gTTSach.Controls.Add(this.label1);
             this.gTTSach.Controls.Add(this.txtMaNV);
             this.gTTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gTTSach.Location = new System.Drawing.Point(12, 47);
+            this.gTTSach.Location = new System.Drawing.Point(18, 69);
+            this.gTTSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gTTSach.Name = "gTTSach";
-            this.gTTSach.Size = new System.Drawing.Size(800, 180);
+            this.gTTSach.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gTTSach.Size = new System.Drawing.Size(1200, 263);
             this.gTTSach.TabIndex = 32;
             this.gTTSach.TabStop = false;
             this.gTTSach.Text = "Thông tin Nhân Viên";
@@ -139,82 +143,82 @@
             // 
             this.simpleButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(142, 144);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.simpleButton4.Location = new System.Drawing.Point(213, 210);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(36, 23);
+            this.simpleButton4.Size = new System.Drawing.Size(54, 34);
             this.simpleButton4.TabIndex = 55;
             // 
             // simpleButton3
             // 
             this.simpleButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(102, 144);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.simpleButton3.Location = new System.Drawing.Point(153, 210);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(36, 23);
+            this.simpleButton3.Size = new System.Drawing.Size(54, 34);
             this.simpleButton3.TabIndex = 56;
             // 
             // simpleButton2
             // 
             this.simpleButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(62, 144);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.simpleButton2.Location = new System.Drawing.Point(93, 210);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(36, 23);
+            this.simpleButton2.Size = new System.Drawing.Size(54, 34);
             this.simpleButton2.TabIndex = 57;
             // 
             // simpleButton1
             // 
             this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(22, 144);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.simpleButton1.Location = new System.Drawing.Point(33, 210);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(36, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(54, 34);
             this.simpleButton1.TabIndex = 58;
             // 
-            // dateTimePicker1
+            // dateNgaySinh
             // 
-            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(168, 96);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(175, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.dateNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dateNgaySinh.Location = new System.Drawing.Point(252, 140);
+            this.dateNgaySinh.Name = "dateNgaySinh";
+            this.dateNgaySinh.Size = new System.Drawing.Size(260, 26);
+            this.dateNgaySinh.TabIndex = 5;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtDiaChi.Location = new System.Drawing.Point(487, 116);
+            this.txtDiaChi.Location = new System.Drawing.Point(730, 170);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(171, 20);
-            this.txtDiaChi.TabIndex = 14;
+            this.txtDiaChi.Size = new System.Drawing.Size(254, 26);
+            this.txtDiaChi.TabIndex = 9;
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtEmail.Location = new System.Drawing.Point(487, 90);
+            this.txtEmail.Location = new System.Drawing.Point(730, 132);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(165, 20);
-            this.txtEmail.TabIndex = 13;
+            this.txtEmail.Size = new System.Drawing.Size(246, 26);
+            this.txtEmail.TabIndex = 8;
             // 
             // txtSDT
             // 
             this.txtSDT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtSDT.Location = new System.Drawing.Point(487, 64);
+            this.txtSDT.Location = new System.Drawing.Point(730, 94);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(100, 20);
-            this.txtSDT.TabIndex = 12;
+            this.txtSDT.Size = new System.Drawing.Size(148, 26);
+            this.txtSDT.TabIndex = 7;
             // 
             // rdbNu
             // 
             this.rdbNu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.rdbNu.AutoSize = true;
-            this.rdbNu.Location = new System.Drawing.Point(557, 35);
+            this.rdbNu.Location = new System.Drawing.Point(836, 51);
+            this.rdbNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbNu.Name = "rdbNu";
-            this.rdbNu.Size = new System.Drawing.Size(41, 17);
+            this.rdbNu.Size = new System.Drawing.Size(57, 24);
             this.rdbNu.TabIndex = 11;
             this.rdbNu.TabStop = true;
             this.rdbNu.Text = "Nữ";
@@ -225,21 +229,24 @@
             // 
             this.rdbNam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.rdbNam.AutoSize = true;
-            this.rdbNam.Location = new System.Drawing.Point(487, 36);
+            this.rdbNam.Location = new System.Drawing.Point(730, 53);
+            this.rdbNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdbNam.Name = "rdbNam";
-            this.rdbNam.Size = new System.Drawing.Size(50, 17);
+            this.rdbNam.Size = new System.Drawing.Size(72, 24);
             this.rdbNam.TabIndex = 10;
             this.rdbNam.TabStop = true;
             this.rdbNam.Text = "Nam";
             this.rdbNam.UseVisualStyleBackColor = true;
+            this.rdbNam.CheckedChanged += new System.EventHandler(this.rdbNam_CheckedChanged);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(401, 70);
+            this.label3.Location = new System.Drawing.Point(602, 102);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 9;
             this.label3.Text = "SDT:";
             // 
@@ -247,9 +254,10 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(404, 122);
+            this.label6.Location = new System.Drawing.Point(606, 178);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "Địa Chỉ:";
             // 
@@ -257,9 +265,10 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(404, 100);
+            this.label8.Location = new System.Drawing.Point(606, 146);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 13);
+            this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 9;
             this.label8.Text = "Email:";
             // 
@@ -267,9 +276,10 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 96);
+            this.label4.Location = new System.Drawing.Point(124, 140);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(98, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "Ngày sinh:";
             // 
@@ -277,9 +287,10 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(401, 38);
+            this.label5.Location = new System.Drawing.Point(602, 56);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.Size = new System.Drawing.Size(91, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Giới Tính:";
             // 
@@ -287,18 +298,20 @@
             // 
             this.txtTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTen.Location = new System.Drawing.Point(168, 65);
+            this.txtTen.Location = new System.Drawing.Point(252, 95);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(175, 20);
+            this.txtTen.Size = new System.Drawing.Size(260, 26);
             this.txtTen.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(82, 68);
+            this.label2.Location = new System.Drawing.Point(123, 99);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(107, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Họ Tên NV:";
             // 
@@ -306,9 +319,10 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 42);
+            this.label1.Location = new System.Drawing.Point(123, 61);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Mã NV:";
             // 
@@ -316,29 +330,33 @@
             // 
             this.txtMaNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(168, 39);
+            this.txtMaNV.Location = new System.Drawing.Point(252, 57);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaNV.MaxLength = 10;
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(175, 20);
+            this.txtMaNV.Size = new System.Drawing.Size(260, 26);
             this.txtMaNV.TabIndex = 0;
             // 
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(523, 245);
+            this.btnThoat.Location = new System.Drawing.Point(784, 358);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 38);
+            this.btnThoat.Size = new System.Drawing.Size(112, 56);
             this.btnThoat.TabIndex = 41;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnHuy
             // 
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(441, 245);
+            this.btnHuy.Location = new System.Drawing.Point(662, 358);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 38);
+            this.btnHuy.Size = new System.Drawing.Size(112, 56);
             this.btnHuy.TabIndex = 40;
             this.btnHuy.Text = "Hủy";
             // 
@@ -346,9 +364,10 @@
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(361, 245);
+            this.btnLuu.Location = new System.Drawing.Point(542, 358);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 38);
+            this.btnLuu.Size = new System.Drawing.Size(112, 56);
             this.btnLuu.TabIndex = 39;
             this.btnLuu.Text = "Lưu";
             // 
@@ -356,9 +375,10 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(280, 245);
+            this.btnSua.Location = new System.Drawing.Point(420, 358);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 38);
+            this.btnSua.Size = new System.Drawing.Size(112, 56);
             this.btnSua.TabIndex = 38;
             this.btnSua.Text = "Sửa";
             // 
@@ -366,9 +386,10 @@
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(199, 245);
+            this.btnXoa.Location = new System.Drawing.Point(298, 358);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 38);
+            this.btnXoa.Size = new System.Drawing.Size(112, 56);
             this.btnXoa.TabIndex = 37;
             this.btnXoa.Text = "Xóa";
             // 
@@ -376,9 +397,10 @@
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(117, 245);
+            this.btnThem.Location = new System.Drawing.Point(176, 358);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 38);
+            this.btnThem.Size = new System.Drawing.Size(112, 56);
             this.btnThem.TabIndex = 36;
             this.btnThem.Text = "Thêm";
             // 
@@ -414,7 +436,8 @@
             // 
             // Ngaysinh
             // 
-            this.Ngaysinh.HeaderText = "Ngaysinh";
+            this.Ngaysinh.DataPropertyName = "Ngaysinh";
+            this.Ngaysinh.HeaderText = "Ngày Sinh";
             this.Ngaysinh.Name = "Ngaysinh";
             this.Ngaysinh.ReadOnly = true;
             this.Ngaysinh.Width = 150;
@@ -445,9 +468,9 @@
             // 
             // frmNhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(826, 496);
+            this.ClientSize = new System.Drawing.Size(1239, 725);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
@@ -457,8 +480,10 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvDSNhanVien);
             this.Controls.Add(this.gTTSach);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
+            this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNhanVien)).EndInit();
             this.gTTSach.ResumeLayout(false);
             this.gTTSach.PerformLayout();
@@ -490,7 +515,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateNgaySinh;
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
