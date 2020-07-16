@@ -33,18 +33,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNhanVienLap = new System.Windows.Forms.TextBox();
             this.btnHuyHoaDon = new DevExpress.XtraEditors.SimpleButton();
-            this.deNgayLap = new DevExpress.XtraEditors.DateEdit();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvData = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Xóa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLapHoaDon = new DevExpress.XtraEditors.SimpleButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gThongTin = new System.Windows.Forms.GroupBox();
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
             this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
@@ -64,10 +63,9 @@
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.txtNhap = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayLap.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayLap.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            this.gThongTin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +76,7 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(539, 8);
+            this.label1.Location = new System.Drawing.Point(555, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 29);
@@ -120,58 +118,43 @@
             this.btnHuyHoaDon.Text = "Hủy hóa đơn";
             this.btnHuyHoaDon.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
-            // deNgayLap
+            // dgvData
             // 
-            this.deNgayLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.deNgayLap.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.deNgayLap.EditValue = null;
-            this.deNgayLap.Location = new System.Drawing.Point(595, 60);
-            this.deNgayLap.Margin = new System.Windows.Forms.Padding(4);
-            this.deNgayLap.Name = "deNgayLap";
-            this.deNgayLap.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayLap.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deNgayLap.Size = new System.Drawing.Size(150, 28);
-            this.deNgayLap.TabIndex = 5;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvData.AllowUserToOrderColumns = true;
+            this.dgvData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
             this.Column1,
             this.Column2,
-            this.Column3,
             this.Column4,
             this.Column5,
             this.Column6,
             this.Xóa});
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 452);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1222, 230);
-            this.dataGridView1.TabIndex = 6;
+            this.dgvData.Location = new System.Drawing.Point(-1, 452);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.Size = new System.Drawing.Size(1222, 230);
+            this.dgvData.TabIndex = 6;
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "NgayLap";
-            this.Column1.HeaderText = "Ngày lập";
+            this.Column1.DataPropertyName = "MaCTHD";
+            this.Column1.HeaderText = "Mã CTHD";
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "MaNV";
-            this.Column2.HeaderText = "Nhân viên lập";
+            this.Column2.DataPropertyName = "MaHD";
+            this.Column2.HeaderText = "Mã Hóa Đơn";
             this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TenKH";
-            this.Column3.HeaderText = "Khách hàng";
-            this.Column3.Name = "Column3";
             // 
             // Column4
             // 
@@ -196,6 +179,8 @@
             this.Xóa.DataPropertyName = "Xóa";
             this.Xóa.HeaderText = "Xóa";
             this.Xóa.Name = "Xóa";
+            this.Xóa.Text = "Xóa";
+            this.Xóa.UseColumnTextForButtonValue = true;
             // 
             // label3
             // 
@@ -221,25 +206,25 @@
             this.btnLapHoaDon.TabIndex = 4;
             this.btnLapHoaDon.Text = "Lập hóa đơn";
             // 
-            // groupBox1
+            // gThongTin
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox1.Controls.Add(this.nudSoLuong);
-            this.groupBox1.Controls.Add(this.txtKhachHang);
-            this.groupBox1.Controls.Add(this.txtTongTien);
-            this.groupBox1.Controls.Add(this.txtMaSach);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(172, 136);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(627, 218);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin";
+            this.gThongTin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gThongTin.Controls.Add(this.nudSoLuong);
+            this.gThongTin.Controls.Add(this.txtKhachHang);
+            this.gThongTin.Controls.Add(this.txtTongTien);
+            this.gThongTin.Controls.Add(this.txtMaSach);
+            this.gThongTin.Controls.Add(this.label8);
+            this.gThongTin.Controls.Add(this.label7);
+            this.gThongTin.Controls.Add(this.label5);
+            this.gThongTin.Controls.Add(this.label4);
+            this.gThongTin.Location = new System.Drawing.Point(172, 136);
+            this.gThongTin.Margin = new System.Windows.Forms.Padding(4);
+            this.gThongTin.Name = "gThongTin";
+            this.gThongTin.Padding = new System.Windows.Forms.Padding(4);
+            this.gThongTin.Size = new System.Drawing.Size(627, 218);
+            this.gThongTin.TabIndex = 7;
+            this.gThongTin.TabStop = false;
+            this.gThongTin.Text = "Thông tin";
             // 
             // nudSoLuong
             // 
@@ -257,8 +242,9 @@
             this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.Cross;
             this.txtKhachHang.Location = new System.Drawing.Point(171, 29);
             this.txtKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKhachHang.Multiline = true;
             this.txtKhachHang.Name = "txtKhachHang";
-            this.txtKhachHang.Size = new System.Drawing.Size(272, 27);
+            this.txtKhachHang.Size = new System.Drawing.Size(272, 32);
             this.txtKhachHang.TabIndex = 8;
             // 
             // txtTongTien
@@ -267,8 +253,9 @@
             this.txtTongTien.Cursor = System.Windows.Forms.Cursors.Cross;
             this.txtTongTien.Location = new System.Drawing.Point(171, 148);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(198, 27);
+            this.txtTongTien.Size = new System.Drawing.Size(209, 30);
             this.txtTongTien.TabIndex = 9;
             // 
             // txtMaSach
@@ -277,8 +264,9 @@
             this.txtMaSach.Cursor = System.Windows.Forms.Cursors.Cross;
             this.txtMaSach.Location = new System.Drawing.Point(171, 69);
             this.txtMaSach.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaSach.Multiline = true;
             this.txtMaSach.Name = "txtMaSach";
-            this.txtMaSach.Size = new System.Drawing.Size(272, 27);
+            this.txtMaSach.Size = new System.Drawing.Size(272, 31);
             this.txtMaSach.TabIndex = 10;
             // 
             // label8
@@ -439,6 +427,16 @@
             this.txtNhap.TabIndex = 41;
             this.txtNhap.Text = "Nhập hóa đơn cần tìm...";
             // 
+            // dateNgayLap
+            // 
+            this.dateNgayLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateNgayLap.CustomFormat = "dd/MM/yyyy";
+            this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNgayLap.Location = new System.Drawing.Point(560, 62);
+            this.dateNgayLap.Name = "dateNgayLap";
+            this.dateNgayLap.Size = new System.Drawing.Size(200, 27);
+            this.dateNgayLap.TabIndex = 43;
+            // 
             // frmHoaDon
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -446,6 +444,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1224, 684);
+            this.Controls.Add(this.dateNgayLap);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.simpleButton4);
@@ -455,8 +454,8 @@
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gThongTin);
+            this.Controls.Add(this.dgvData);
             this.Controls.Add(this.btnHuyHoaDon);
             this.Controls.Add(this.btnLapHoaDon);
             this.Controls.Add(this.textBox1);
@@ -465,15 +464,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.deNgayLap);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHoaDon";
             this.Text = "frmHoaDon";
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayLap.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deNgayLap.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmHoaDon_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            this.gThongTin.ResumeLayout(false);
+            this.gThongTin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -486,11 +483,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNhanVienLap;
         private DevExpress.XtraEditors.SimpleButton btnHuyHoaDon;
-        private DevExpress.XtraEditors.DateEdit deNgayLap;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Label label3;
         private DevExpress.XtraEditors.SimpleButton btnLapHoaDon;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gThongTin;
         private System.Windows.Forms.NumericUpDown nudSoLuong;
         private System.Windows.Forms.TextBox txtKhachHang;
         private System.Windows.Forms.TextBox txtTongTien;
@@ -499,13 +495,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewButtonColumn Xóa;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private DevExpress.XtraEditors.SimpleButton btnThoat;
@@ -517,5 +506,13 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.SimpleButton btnTimKiem;
         private System.Windows.Forms.TextBox txtNhap;
+        private System.Windows.Forms.DateTimePicker dateNgayLap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewButtonColumn Xóa;
     }
 }

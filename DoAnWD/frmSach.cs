@@ -57,7 +57,7 @@ namespace DoAnWD
             txtNhaXB.DataBindings.Add("text", tblSACH, "NhaXB", true);
             txtDonGia.DataBindings.Add("text", tblSACH, "DonGia", true);
             txtGiaGoc.DataBindings.Add("text", tblSACH, "GiaGoc", true);
-            nudSoLuong.DataBindings.Add("value", tblSACH, "SoLuong", true);
+            nudSoLuong.DataBindings.Add("value", tblSACH, "SoLuong", true, DataSourceUpdateMode.OnValidation);
             txtNamXB.DataBindings.Add("text", tblSACH, "NamXB", true);
             pHinh.DataBindings.Add("Image", tblSACH, "Hinh", true);
             SACH = this.BindingContext[tblSACH];
@@ -87,6 +87,7 @@ namespace DoAnWD
         private void btnThem_Click(object sender, EventArgs e)
         {
             SACH.AddNew();
+     
             capnhat = true;
             enaButton();
         }

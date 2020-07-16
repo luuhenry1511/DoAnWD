@@ -41,6 +41,7 @@ namespace DoAnWD
             txtNamXB.DataBindings.Add("text", tblSACH, "NamXB", true);
             pHinh.DataBindings.Add("Image", tblSACH, "Hinh", true);
             SACH = this.BindingContext[tblSACH];
+            gTTSach.Enabled = false;
         }
 
         private void LoadCBOTheLoai()

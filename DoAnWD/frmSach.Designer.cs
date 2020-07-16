@@ -98,7 +98,7 @@
             this.Column7,
             this.Column8});
             this.dgvDSSach.Location = new System.Drawing.Point(290, 441);
-            this.dgvDSSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDSSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSSach.Name = "dgvDSSach";
             this.dgvDSSach.ReadOnly = true;
             this.dgvDSSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -204,9 +204,9 @@
             this.gTTSach.Controls.Add(this.txtMaSach);
             this.gTTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTSach.Location = new System.Drawing.Point(10, 86);
-            this.gTTSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gTTSach.Margin = new System.Windows.Forms.Padding(4);
             this.gTTSach.Name = "gTTSach";
-            this.gTTSach.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gTTSach.Padding = new System.Windows.Forms.Padding(4);
             this.gTTSach.Size = new System.Drawing.Size(1024, 224);
             this.gTTSach.TabIndex = 12;
             this.gTTSach.TabStop = false;
@@ -215,7 +215,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(237, 75);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.maskedTextBox1.Mask = "S0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(148, 26);
@@ -224,57 +224,68 @@
             // txtGiaGoc
             // 
             this.txtGiaGoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtGiaGoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiaGoc.Location = new System.Drawing.Point(883, 146);
-            this.txtGiaGoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGiaGoc.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaGoc.Name = "txtGiaGoc";
-            this.txtGiaGoc.Size = new System.Drawing.Size(103, 26);
+            this.txtGiaGoc.Size = new System.Drawing.Size(103, 28);
             this.txtGiaGoc.TabIndex = 18;
             // 
             // txtNamXB
             // 
             this.txtNamXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtNamXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamXB.Location = new System.Drawing.Point(640, 190);
-            this.txtNamXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNamXB.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamXB.Name = "txtNamXB";
-            this.txtNamXB.Size = new System.Drawing.Size(130, 26);
+            this.txtNamXB.Size = new System.Drawing.Size(130, 28);
             this.txtNamXB.TabIndex = 17;
             // 
             // txtDonGia
             // 
             this.txtDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtDonGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(640, 143);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
-            this.txtDonGia.Size = new System.Drawing.Size(130, 26);
+            this.txtDonGia.Size = new System.Drawing.Size(130, 28);
             this.txtDonGia.TabIndex = 17;
             // 
             // nudSoLuong
             // 
             this.nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.nudSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudSoLuong.Location = new System.Drawing.Point(883, 108);
-            this.nudSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudSoLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.nudSoLuong.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.nudSoLuong.Name = "nudSoLuong";
-            this.nudSoLuong.Size = new System.Drawing.Size(86, 26);
+            this.nudSoLuong.Size = new System.Drawing.Size(86, 28);
             this.nudSoLuong.TabIndex = 16;
             // 
             // cboTheLoai
             // 
             this.cboTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboTheLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTheLoai.FormattingEnabled = true;
             this.cboTheLoai.Location = new System.Drawing.Point(194, 149);
-            this.cboTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTheLoai.Margin = new System.Windows.Forms.Padding(4);
             this.cboTheLoai.Name = "cboTheLoai";
-            this.cboTheLoai.Size = new System.Drawing.Size(260, 28);
+            this.cboTheLoai.Size = new System.Drawing.Size(260, 30);
             this.cboTheLoai.TabIndex = 15;
             // 
             // cboKeSach
             // 
             this.cboKeSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cboKeSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboKeSach.FormattingEnabled = true;
             this.cboKeSach.Location = new System.Drawing.Point(640, 104);
-            this.cboKeSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboKeSach.Margin = new System.Windows.Forms.Padding(4);
             this.cboKeSach.Name = "cboKeSach";
-            this.cboKeSach.Size = new System.Drawing.Size(126, 28);
+            this.cboKeSach.Size = new System.Drawing.Size(126, 30);
             this.cboKeSach.TabIndex = 14;
             // 
             // label6
@@ -348,7 +359,7 @@
             this.txtTenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSach.Location = new System.Drawing.Point(194, 105);
-            this.txtTenSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenSach.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(260, 26);
             this.txtTenSach.TabIndex = 4;
@@ -391,7 +402,7 @@
             this.txtNhaXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNhaXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhaXB.Location = new System.Drawing.Point(640, 51);
-            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhaXB.MaxLength = 10;
             this.txtNhaXB.Name = "txtNhaXB";
             this.txtNhaXB.Size = new System.Drawing.Size(260, 26);
@@ -402,7 +413,7 @@
             this.txtMaSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.Location = new System.Drawing.Point(265, 77);
-            this.txtMaSach.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtMaSach.Margin = new System.Windows.Forms.Padding(6);
             this.txtMaSach.MaxLength = 10;
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(260, 26);
@@ -468,7 +479,7 @@
             // 
             this.btnChonHinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnChonHinh.Location = new System.Drawing.Point(1093, 381);
-            this.btnChonHinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChonHinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnChonHinh.Name = "btnChonHinh";
             this.btnChonHinh.Size = new System.Drawing.Size(112, 44);
             this.btnChonHinh.TabIndex = 31;
@@ -480,7 +491,7 @@
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(803, 368);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 56);
             this.btnThoat.TabIndex = 30;
@@ -492,7 +503,7 @@
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
             this.btnHuy.Location = new System.Drawing.Point(681, 368);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(112, 56);
             this.btnHuy.TabIndex = 29;
@@ -504,7 +515,7 @@
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.Location = new System.Drawing.Point(559, 368);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(112, 56);
             this.btnLuu.TabIndex = 28;
@@ -516,7 +527,7 @@
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.Location = new System.Drawing.Point(437, 368);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 56);
             this.btnSua.TabIndex = 27;
@@ -528,7 +539,7 @@
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
             this.btnXoa.Location = new System.Drawing.Point(317, 368);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 56);
             this.btnXoa.TabIndex = 26;
@@ -540,7 +551,7 @@
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.Location = new System.Drawing.Point(195, 368);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 56);
             this.btnThem.TabIndex = 25;
@@ -551,7 +562,7 @@
             // 
             this.pHinh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pHinh.Location = new System.Drawing.Point(1043, 86);
-            this.pHinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pHinh.Margin = new System.Windows.Forms.Padding(4);
             this.pHinh.Name = "pHinh";
             this.pHinh.Size = new System.Drawing.Size(224, 279);
             this.pHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -587,7 +598,7 @@
             this.Controls.Add(this.dgvDSSach);
             this.Controls.Add(this.gTTSach);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmSach";
             this.Text = "frmSach";
             this.Load += new System.EventHandler(this.frmSach_Load);

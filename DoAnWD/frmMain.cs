@@ -161,6 +161,7 @@ namespace DoAnWD
             else
             {
                 frmHoaDon f = new frmHoaDon();
+                f.Controls["txtNhanVienLap"].Text = maNV;
                 TabPage p = new TabPage(f.Text);
                 p.Name = "QuanLiDonHang";
                 f.TopLevel = false;

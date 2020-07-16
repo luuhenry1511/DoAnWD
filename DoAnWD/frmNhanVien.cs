@@ -87,5 +87,73 @@ namespace DoAnWD
         {
             rdbNu.Checked = !rdbNam.Checked;
         }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            NHANVIEN.Position = 0;
+        }
+
+        private void btnPre_Click(object sender, EventArgs e)
+        {
+            if (NHANVIEN.Position > 0)
+                NHANVIEN.Position -= 1;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (NHANVIEN.Position < NHANVIEN.Count - 1)
+                NHANVIEN.Position += 1;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            NHANVIEN.Position = NHANVIEN.Count - 1;
+        }
+
+        private void dgvDSNhanVien_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvDSNhanVien.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            NHANVIEN.AddNew(); 
+            capnhat = true;
+            enaButton();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa nhân viên " + txtTen.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+
+                NHANVIEN.RemoveAt(NHANVIEN.Position);
+                tblNHANVIEN.ghi();
+                MessageBox.Show("Xóa thành công!");
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            capnhat = true;
+            enaButton();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            NHANVIEN.EndCurrentEdit();
+            tblNHANVIEN.ghi();
+            capnhat = false;
+            enaButton();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            NHANVIEN.CancelCurrentEdit();
+            tblNHANVIEN.RejectChanges();
+            capnhat = false;
+            enaButton();
+        }
     }
 }

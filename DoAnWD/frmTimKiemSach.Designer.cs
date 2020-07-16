@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimKiemSach));
-            this.btnHienThi = new DevExpress.XtraEditors.SimpleButton();
             this.gTTSach = new System.Windows.Forms.GroupBox();
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -67,16 +66,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pHinh)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnHienThi
-            // 
-            this.btnHienThi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHienThi.ImageOptions.Image")));
-            this.btnHienThi.Location = new System.Drawing.Point(38, 393);
-            this.btnHienThi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHienThi.Name = "btnHienThi";
-            this.btnHienThi.Size = new System.Drawing.Size(178, 50);
-            this.btnHienThi.TabIndex = 14;
-            this.btnHienThi.Text = "Hiển thị tất cả";
-            // 
             // gTTSach
             // 
             this.gTTSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -99,9 +88,9 @@
             this.gTTSach.Controls.Add(this.txtMaSach);
             this.gTTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTSach.Location = new System.Drawing.Point(38, 102);
-            this.gTTSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gTTSach.Margin = new System.Windows.Forms.Padding(4);
             this.gTTSach.Name = "gTTSach";
-            this.gTTSach.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gTTSach.Padding = new System.Windows.Forms.Padding(4);
             this.gTTSach.Size = new System.Drawing.Size(969, 224);
             this.gTTSach.TabIndex = 15;
             this.gTTSach.TabStop = false;
@@ -111,7 +100,7 @@
             // 
             this.txtNamXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNamXB.Location = new System.Drawing.Point(696, 123);
-            this.txtNamXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNamXB.Margin = new System.Windows.Forms.Padding(4);
             this.txtNamXB.Name = "txtNamXB";
             this.txtNamXB.Size = new System.Drawing.Size(130, 26);
             this.txtNamXB.TabIndex = 17;
@@ -121,7 +110,7 @@
             // 
             this.txtDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtDonGia.Location = new System.Drawing.Point(696, 85);
-            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(130, 26);
             this.txtDonGia.TabIndex = 17;
@@ -130,7 +119,7 @@
             // 
             this.nudSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.nudSoLuong.Location = new System.Drawing.Point(696, 165);
-            this.nudSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(86, 26);
             this.nudSoLuong.TabIndex = 16;
@@ -140,7 +129,7 @@
             this.cboTheLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cboTheLoai.FormattingEnabled = true;
             this.cboTheLoai.Location = new System.Drawing.Point(166, 129);
-            this.cboTheLoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTheLoai.Margin = new System.Windows.Forms.Padding(4);
             this.cboTheLoai.Name = "cboTheLoai";
             this.cboTheLoai.Size = new System.Drawing.Size(260, 28);
             this.cboTheLoai.TabIndex = 15;
@@ -150,7 +139,7 @@
             this.cboKeSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.cboKeSach.FormattingEnabled = true;
             this.cboKeSach.Location = new System.Drawing.Point(696, 45);
-            this.cboKeSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboKeSach.Margin = new System.Windows.Forms.Padding(4);
             this.cboKeSach.Name = "cboKeSach";
             this.cboKeSach.Size = new System.Drawing.Size(126, 28);
             this.cboKeSach.TabIndex = 14;
@@ -215,7 +204,7 @@
             this.txtTenSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtTenSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSach.Location = new System.Drawing.Point(166, 91);
-            this.txtTenSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenSach.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(260, 26);
             this.txtTenSach.TabIndex = 4;
@@ -258,7 +247,7 @@
             this.txtNhaXB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtNhaXB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhaXB.Location = new System.Drawing.Point(166, 168);
-            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhaXB.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhaXB.MaxLength = 10;
             this.txtNhaXB.Name = "txtNhaXB";
             this.txtNhaXB.Size = new System.Drawing.Size(260, 26);
@@ -269,7 +258,7 @@
             this.txtMaSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaSach.Location = new System.Drawing.Point(166, 53);
-            this.txtMaSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaSach.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaSach.MaxLength = 10;
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(260, 26);
@@ -280,7 +269,7 @@
             this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.Image")));
             this.btnTimKiem.Location = new System.Drawing.Point(874, 342);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(132, 51);
             this.btnTimKiem.TabIndex = 17;
@@ -289,10 +278,10 @@
             // txtNhap
             // 
             this.txtNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNhap.Location = new System.Drawing.Point(243, 354);
-            this.txtNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhap.Location = new System.Drawing.Point(264, 354);
+            this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(620, 27);
+            this.txtNhap.Size = new System.Drawing.Size(600, 27);
             this.txtNhap.TabIndex = 16;
             this.txtNhap.Text = "Nhập tên sách hoặc nhà xuất bản cần tìm...";
             this.txtNhap.TextChanged += new System.EventHandler(this.txtNhap_TextChanged);
@@ -301,13 +290,14 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Teal;
             this.label1.Location = new System.Drawing.Point(504, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 29);
+            this.label1.Size = new System.Drawing.Size(226, 29);
             this.label1.TabIndex = 25;
-            this.label1.Text = "QUẢN LÝ SÁCH";
+            this.label1.Text = "THÔNG TIN SÁCH";
             // 
             // dgvDSSach
             // 
@@ -326,7 +316,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.dgvDSSach.Location = new System.Drawing.Point(3, 452);
-            this.dgvDSSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDSSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSSach.Name = "dgvDSSach";
             this.dgvDSSach.ReadOnly = true;
             this.dgvDSSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -421,8 +411,7 @@
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.gTTSach);
-            this.Controls.Add(this.btnHienThi);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmTimKiemSach";
             this.Text = "frmTimKiemSach";
             this.Load += new System.EventHandler(this.frmTimKiemSach_Load);
@@ -437,8 +426,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.SimpleButton btnHienThi;
         private System.Windows.Forms.GroupBox gTTSach;
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.TextBox txtDonGia;
