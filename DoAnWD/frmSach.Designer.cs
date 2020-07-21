@@ -41,7 +41,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gTTSach = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedMaSach = new System.Windows.Forms.MaskedTextBox();
             this.txtGiaGoc = new System.Windows.Forms.TextBox();
             this.txtNamXB = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
@@ -59,7 +59,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNhaXB = new System.Windows.Forms.TextBox();
-            this.txtMaSach = new System.Windows.Forms.TextBox();
             this.btnLast = new DevExpress.XtraEditors.SimpleButton();
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
@@ -183,7 +182,7 @@
             // 
             this.gTTSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gTTSach.Controls.Add(this.maskedTextBox1);
+            this.gTTSach.Controls.Add(this.maskedMaSach);
             this.gTTSach.Controls.Add(this.txtGiaGoc);
             this.gTTSach.Controls.Add(this.txtNamXB);
             this.gTTSach.Controls.Add(this.txtDonGia);
@@ -201,7 +200,6 @@
             this.gTTSach.Controls.Add(this.label2);
             this.gTTSach.Controls.Add(this.label1);
             this.gTTSach.Controls.Add(this.txtNhaXB);
-            this.gTTSach.Controls.Add(this.txtMaSach);
             this.gTTSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gTTSach.Location = new System.Drawing.Point(10, 86);
             this.gTTSach.Margin = new System.Windows.Forms.Padding(4);
@@ -212,14 +210,15 @@
             this.gTTSach.TabStop = false;
             this.gTTSach.Text = "Thông tin Sách ";
             // 
-            // maskedTextBox1
+            // maskedMaSach
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(237, 75);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox1.Mask = "S0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(148, 26);
-            this.maskedTextBox1.TabIndex = 19;
+            this.maskedMaSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.maskedMaSach.Location = new System.Drawing.Point(194, 54);
+            this.maskedMaSach.Margin = new System.Windows.Forms.Padding(4);
+            this.maskedMaSach.Mask = "S0000";
+            this.maskedMaSach.Name = "maskedMaSach";
+            this.maskedMaSach.Size = new System.Drawing.Size(260, 26);
+            this.maskedMaSach.TabIndex = 19;
             // 
             // txtGiaGoc
             // 
@@ -407,17 +406,6 @@
             this.txtNhaXB.Name = "txtNhaXB";
             this.txtNhaXB.Size = new System.Drawing.Size(260, 26);
             this.txtNhaXB.TabIndex = 0;
-            // 
-            // txtMaSach
-            // 
-            this.txtMaSach.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtMaSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSach.Location = new System.Drawing.Point(265, 77);
-            this.txtMaSach.Margin = new System.Windows.Forms.Padding(6);
-            this.txtMaSach.MaxLength = 10;
-            this.txtMaSach.Name = "txtMaSach";
-            this.txtMaSach.Size = new System.Drawing.Size(260, 26);
-            this.txtMaSach.TabIndex = 0;
             // 
             // btnLast
             // 
@@ -623,7 +611,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtMaSach;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.NumericUpDown nudSoLuong;
         private System.Windows.Forms.ComboBox cboTheLoai;
@@ -646,7 +633,7 @@
         private System.Windows.Forms.TextBox txtNamXB;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtNhaXB;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedMaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -46,7 +46,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtNhaXB = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new DevExpress.XtraEditors.SimpleButton();
             this.txtNhap = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDSSach = new System.Windows.Forms.DataGridView();
@@ -60,6 +59,10 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pHinh = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.radTimTheoTen = new System.Windows.Forms.RadioButton();
+            this.radTimTheoNXB = new System.Windows.Forms.RadioButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.gTTSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSSach)).BeginInit();
@@ -264,24 +267,14 @@
             this.txtMaSach.Size = new System.Drawing.Size(260, 26);
             this.txtMaSach.TabIndex = 0;
             // 
-            // btnTimKiem
-            // 
-            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnTimKiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.ImageOptions.Image")));
-            this.btnTimKiem.Location = new System.Drawing.Point(874, 342);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(132, 51);
-            this.btnTimKiem.TabIndex = 17;
-            this.btnTimKiem.Text = "Tìm kiếm";
-            // 
             // txtNhap
             // 
             this.txtNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNhap.Location = new System.Drawing.Point(264, 354);
+            this.txtNhap.Location = new System.Drawing.Point(505, 352);
             this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNhap.Multiline = true;
             this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(600, 27);
+            this.txtNhap.Size = new System.Drawing.Size(458, 44);
             this.txtNhap.TabIndex = 16;
             this.txtNhap.Text = "Nhập tên sách hoặc nhà xuất bản cần tìm...";
             this.txtNhap.TextChanged += new System.EventHandler(this.txtNhap_TextChanged);
@@ -400,15 +393,62 @@
             this.pHinh.TabIndex = 27;
             this.pHinh.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(38, 360);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(118, 19);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Tìm kiếm theo:";
+            // 
+            // radTimTheoTen
+            // 
+            this.radTimTheoTen.AutoSize = true;
+            this.radTimTheoTen.Location = new System.Drawing.Point(185, 360);
+            this.radTimTheoTen.Name = "radTimTheoTen";
+            this.radTimTheoTen.Size = new System.Drawing.Size(133, 23);
+            this.radTimTheoTen.TabIndex = 29;
+            this.radTimTheoTen.TabStop = true;
+            this.radTimTheoTen.Text = "Theo tên sách";
+            this.radTimTheoTen.UseVisualStyleBackColor = true;
+            this.radTimTheoTen.CheckedChanged += new System.EventHandler(this.radTimTheoTen_CheckedChanged);
+            // 
+            // radTimTheoNXB
+            // 
+            this.radTimTheoNXB.AutoSize = true;
+            this.radTimTheoNXB.Location = new System.Drawing.Point(338, 360);
+            this.radTimTheoNXB.Name = "radTimTheoNXB";
+            this.radTimTheoNXB.Size = new System.Drawing.Size(167, 23);
+            this.radTimTheoNXB.TabIndex = 30;
+            this.radTimTheoNXB.TabStop = true;
+            this.radTimTheoNXB.Text = "Theo nhà xuất bản";
+            this.radTimTheoNXB.UseVisualStyleBackColor = true;
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
+            this.btnThoat.Location = new System.Drawing.Point(990, 343);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(112, 56);
+            this.btnThoat.TabIndex = 31;
+            this.btnThoat.Text = "&Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
             // frmTimKiemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1252, 726);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.radTimTheoNXB);
+            this.Controls.Add(this.radTimTheoTen);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.pHinh);
             this.Controls.Add(this.dgvDSSach);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.gTTSach);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -443,7 +483,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNhaXB;
         private System.Windows.Forms.TextBox txtMaSach;
-        private DevExpress.XtraEditors.SimpleButton btnTimKiem;
         private System.Windows.Forms.TextBox txtNhap;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvDSSach;
@@ -457,5 +496,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.PictureBox pHinh;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RadioButton radTimTheoTen;
+        private System.Windows.Forms.RadioButton radTimTheoNXB;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
     }
 }

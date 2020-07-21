@@ -42,6 +42,8 @@ namespace DoAnWD
             pHinh.DataBindings.Add("Image", tblSACH, "Hinh", true);
             SACH = this.BindingContext[tblSACH];
             gTTSach.Enabled = false;
+
+            radTimTheoTen.Checked = true;
         }
 
         private void LoadCBOTheLoai()
@@ -69,10 +71,24 @@ namespace DoAnWD
 
         private void txtNhap_TextChanged(object sender, EventArgs e)
         {
+            if (radTimTheoTen.Checked == true) { 
             string std = string.Format("TenSach like '%{0}%'", txtNhap.Text);
             tblSACH.DefaultView.RowFilter = std;
-            //string std2 = string.Format("NhaXB like '%{0}%'", txtNhap.Text);
-            //tblSACH.DefaultView.RowFilter = std2; //
+            }
+            else {
+                string std2 = string.Format("NhaXB like '%{0}%'", txtNhap.Text);
+                tblSACH.DefaultView.RowFilter = std2; }
+            }
+
+            private void radTimTheoTen_CheckedChanged(object sender, EventArgs e)
+        {
+            radTimTheoTen.Checked = !radTimTheoNXB.Checked;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
         }
     }
 }

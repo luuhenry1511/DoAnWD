@@ -50,7 +50,7 @@ namespace DoAnWD
             LoadDGVSach();
             LoadCBOKeSach();
             LoadCBOTheLoai();
-            txtMaSach.DataBindings.Add("text", tblSACH, "MaSach", true);
+            maskedMaSach.DataBindings.Add("text", tblSACH, "MaSach", true);
             txtTenSach.DataBindings.Add("text", tblSACH, "TenSach", true);
             cboKeSach.DataBindings.Add("SelectedValue", tblSACH, "KeSach", true);
             cboTheLoai.DataBindings.Add("SelectedValue", tblSACH, "TheLoai", true);
@@ -69,6 +69,8 @@ namespace DoAnWD
             cboTheLoai.DataSource = tblTHELOAI;
             cboTheLoai.DisplayMember = "TenTheLoai";
             cboTheLoai.ValueMember = "MaTheLoai";
+            cboTheLoai.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cboTheLoai.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void LoadCBOKeSach()
@@ -76,6 +78,8 @@ namespace DoAnWD
             cboKeSach.DataSource = tblKESACH;
             cboKeSach.DisplayMember = "TenKeSach";
             cboKeSach.ValueMember = "MaKeSach";
+            cboKeSach.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cboKeSach.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void LoadDGVSach()
@@ -87,17 +91,28 @@ namespace DoAnWD
         private void btnThem_Click(object sender, EventArgs e)
         {
             SACH.AddNew();
-     
+
             capnhat = true;
             enaButton();
+            
+            
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            SACH.EndCurrentEdit();
-            tblSACH.ghi();
-            capnhat = false;
-            enaButton();
+            if (txtTenSach.Text != "") //kiem tra dieu kien
+            {
+                SACH.EndCurrentEdit();
+                tblSACH.ghi();
+                capnhat = false;
+                enaButton();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền tên sách");
+                txtTenSach.Focus();
+            }
+            
         }
 
         private void btnFirst_Click(object sender, EventArgs e)

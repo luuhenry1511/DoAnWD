@@ -102,6 +102,9 @@
     <Compile Include="Moduls\XLBANG.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Moduls\XLLOAITK.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Moduls\XLHOADON.cs">
       <SubType>Component</SubType>
     </Compile>
