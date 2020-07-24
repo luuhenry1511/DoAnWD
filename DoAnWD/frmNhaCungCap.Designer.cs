@@ -252,6 +252,7 @@
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(175, 20);
             this.txtMaNCC.TabIndex = 0;
+            this.txtMaNCC.TextChanged += new System.EventHandler(this.txtMaNCC_TextChanged);
             // 
             // btnThoat
             // 
@@ -262,6 +263,7 @@
             this.btnThoat.Size = new System.Drawing.Size(75, 38);
             this.btnThoat.TabIndex = 50;
             this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnHuy
             // 
@@ -272,6 +274,7 @@
             this.btnHuy.Size = new System.Drawing.Size(75, 38);
             this.btnHuy.TabIndex = 49;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -282,6 +285,7 @@
             this.btnLuu.Size = new System.Drawing.Size(75, 38);
             this.btnLuu.TabIndex = 48;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
@@ -292,6 +296,7 @@
             this.btnSua.Size = new System.Drawing.Size(75, 38);
             this.btnSua.TabIndex = 47;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -302,6 +307,7 @@
             this.btnXoa.Size = new System.Drawing.Size(75, 38);
             this.btnXoa.TabIndex = 46;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
@@ -312,6 +318,7 @@
             this.btnThem.Size = new System.Drawing.Size(75, 38);
             this.btnThem.TabIndex = 45;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // simpleButton4
             // 

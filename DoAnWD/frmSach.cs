@@ -176,5 +176,10 @@ namespace DoAnWD
                 pHinh.ImageLocation = DialogChonhinh.FileName;
             }
         }
+
+        private void maskedMaSach_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

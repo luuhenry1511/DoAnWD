@@ -64,5 +64,64 @@ namespace DoAnWD
             foreach (DataGridViewRow r in dgvDSS.Rows)
                 r.Cells[0].Value = r.Index + 1;
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            TabPage T = (TabPage)this.Parent;
+            T.Dispose();
+        }
+
+        private void txtMaNCC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (txtTenNCC.Text != "") //kiem tra dieu kien
+            {
+                NCC.EndCurrentEdit();
+                tblNCC.ghi();
+                capnhat = false;
+                enaButton();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền tên sách");
+                txtTenNCC.Focus();
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            NCC.AddNew();
+            capnhat = true;
+            enaButton();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa sách " + txtTenNCC.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+
+                NCC.RemoveAt(NCC.Position);
+                tblNCC.ghi();
+                MessageBox.Show("Xóa thành công!");
+            }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            capnhat = true;
+            enaButton();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            NCC.CancelCurrentEdit();
+            tblNCC.RejectChanges();
+            capnhat = false;
+            enaButton();
+        }
     }
 }
