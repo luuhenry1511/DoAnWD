@@ -60,10 +60,10 @@
             this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
             this.txtNhap = new System.Windows.Forms.TextBox();
             this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -79,10 +79,9 @@
             this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(541, 27);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(361, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.Size = new System.Drawing.Size(87, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "HÓA ĐƠN";
             // 
@@ -91,10 +90,9 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label2.Location = new System.Drawing.Point(508, 136);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(339, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 19);
+            this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày lập:";
             // 
@@ -102,10 +100,9 @@
             // 
             this.txtNhanVienLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtNhanVienLap.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtNhanVienLap.Location = new System.Drawing.Point(636, 205);
-            this.txtNhanVienLap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNhanVienLap.Location = new System.Drawing.Point(424, 140);
             this.txtNhanVienLap.Name = "txtNhanVienLap";
-            this.txtNhanVienLap.Size = new System.Drawing.Size(148, 27);
+            this.txtNhanVienLap.Size = new System.Drawing.Size(100, 21);
             this.txtNhanVienLap.TabIndex = 2;
             // 
             // btnHuy
@@ -113,10 +110,9 @@
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(857, 173);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuy.Location = new System.Drawing.Point(571, 118);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(137, 64);
+            this.btnHuy.Size = new System.Drawing.Size(91, 44);
             this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.Click += new System.EventHandler(this.simpleButton2_Click);
@@ -139,10 +135,9 @@
             this.Column5,
             this.Column6,
             this.Xóa});
-            this.dgvData.Location = new System.Drawing.Point(565, 424);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvData.Location = new System.Drawing.Point(377, 290);
             this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(67, 230);
+            this.dgvData.Size = new System.Drawing.Size(45, 157);
             this.dgvData.TabIndex = 6;
             this.dgvData.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvData_DataBindingComplete);
             // 
@@ -215,10 +210,9 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label3.Location = new System.Drawing.Point(508, 208);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(339, 142);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nhân viên lập:";
             // 
@@ -227,10 +221,9 @@
             this.btnLapHoaDon.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLapHoaDon.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLapHoaDon.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLapHoaDon.ImageOptions.Image")));
-            this.btnLapHoaDon.Location = new System.Drawing.Point(857, 83);
-            this.btnLapHoaDon.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLapHoaDon.Location = new System.Drawing.Point(571, 57);
             this.btnLapHoaDon.Name = "btnLapHoaDon";
-            this.btnLapHoaDon.Size = new System.Drawing.Size(137, 72);
+            this.btnLapHoaDon.Size = new System.Drawing.Size(91, 49);
             this.btnLapHoaDon.TabIndex = 4;
             this.btnLapHoaDon.Text = "Lập hóa đơn";
             // 
@@ -243,11 +236,9 @@
             this.gThongTin.Controls.Add(this.label8);
             this.gThongTin.Controls.Add(this.label7);
             this.gThongTin.Controls.Add(this.label5);
-            this.gThongTin.Location = new System.Drawing.Point(14, 83);
-            this.gThongTin.Margin = new System.Windows.Forms.Padding(4);
+            this.gThongTin.Location = new System.Drawing.Point(9, 57);
             this.gThongTin.Name = "gThongTin";
-            this.gThongTin.Padding = new System.Windows.Forms.Padding(4);
-            this.gThongTin.Size = new System.Drawing.Size(451, 201);
+            this.gThongTin.Size = new System.Drawing.Size(301, 138);
             this.gThongTin.TabIndex = 7;
             this.gThongTin.TabStop = false;
             this.gThongTin.Text = "Thông tin";
@@ -256,43 +247,40 @@
             // 
             this.nudSoLuong.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudSoLuong.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.nudSoLuong.Location = new System.Drawing.Point(152, 91);
-            this.nudSoLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.nudSoLuong.Location = new System.Drawing.Point(101, 62);
             this.nudSoLuong.Name = "nudSoLuong";
-            this.nudSoLuong.Size = new System.Drawing.Size(182, 27);
+            this.nudSoLuong.Size = new System.Drawing.Size(121, 21);
             this.nudSoLuong.TabIndex = 11;
             // 
             // txtTongTien
             // 
             this.txtTongTien.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTongTien.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtTongTien.Location = new System.Drawing.Point(152, 131);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTongTien.Location = new System.Drawing.Point(101, 90);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(209, 30);
+            this.txtTongTien.Size = new System.Drawing.Size(141, 22);
             this.txtTongTien.TabIndex = 9;
             // 
             // txtMaSach
             // 
             this.txtMaSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMaSach.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtMaSach.Location = new System.Drawing.Point(152, 52);
-            this.txtMaSach.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaSach.Location = new System.Drawing.Point(101, 36);
             this.txtMaSach.Multiline = true;
             this.txtMaSach.Name = "txtMaSach";
-            this.txtMaSach.Size = new System.Drawing.Size(272, 31);
+            this.txtMaSach.Size = new System.Drawing.Size(183, 22);
             this.txtMaSach.TabIndex = 10;
+            this.txtMaSach.TextChanged += new System.EventHandler(this.txtMaSach_TextChanged);
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label8.Location = new System.Drawing.Point(20, 142);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(13, 97);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(83, 19);
+            this.label8.Size = new System.Drawing.Size(56, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Tổng tiền:";
             // 
@@ -301,10 +289,9 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label7.Location = new System.Drawing.Point(20, 103);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(13, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 19);
+            this.label7.Size = new System.Drawing.Size(53, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Số lượng:";
             // 
@@ -313,10 +300,9 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label5.Location = new System.Drawing.Point(20, 63);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(13, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 19);
+            this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 6;
             this.label5.Text = "Mã sách:";
             // 
@@ -324,11 +310,10 @@
             // 
             this.txtKhachHang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtKhachHang.Location = new System.Drawing.Point(636, 241);
-            this.txtKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKhachHang.Location = new System.Drawing.Point(424, 165);
             this.txtKhachHang.Multiline = true;
             this.txtKhachHang.Name = "txtKhachHang";
-            this.txtKhachHang.Size = new System.Drawing.Size(148, 32);
+            this.txtKhachHang.Size = new System.Drawing.Size(100, 23);
             this.txtKhachHang.TabIndex = 8;
             // 
             // label4
@@ -336,10 +321,9 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label4.Location = new System.Drawing.Point(506, 241);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(337, 165);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 19);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "Khách hàng:";
             // 
@@ -348,10 +332,9 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.label6.Location = new System.Drawing.Point(508, 174);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(339, 119);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 19);
+            this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 1;
             this.label6.Text = "Mã hóa đơn:";
             // 
@@ -359,21 +342,19 @@
             // 
             this.txtMaHD.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMaHD.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtMaHD.Location = new System.Drawing.Point(636, 170);
-            this.txtMaHD.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaHD.Location = new System.Drawing.Point(424, 116);
             this.txtMaHD.Multiline = true;
             this.txtMaHD.Name = "txtMaHD";
-            this.txtMaHD.Size = new System.Drawing.Size(148, 27);
+            this.txtMaHD.Size = new System.Drawing.Size(100, 20);
             this.txtMaHD.TabIndex = 2;
             // 
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(1020, 174);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThoat.Location = new System.Drawing.Point(680, 119);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(134, 70);
+            this.btnThoat.Size = new System.Drawing.Size(89, 48);
             this.btnThoat.TabIndex = 36;
             this.btnThoat.Text = "&Thoát";
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -382,10 +363,9 @@
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(857, 245);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLuu.Location = new System.Drawing.Point(571, 168);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(137, 66);
+            this.btnLuu.Size = new System.Drawing.Size(91, 45);
             this.btnLuu.TabIndex = 34;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -394,60 +374,63 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(1020, 83);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSua.Location = new System.Drawing.Point(680, 57);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(134, 72);
+            this.btnSua.Size = new System.Drawing.Size(89, 49);
             this.btnSua.TabIndex = 33;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // simpleButton4
+            // btnLast
             // 
-            this.simpleButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(691, 324);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(47, 34);
-            this.simpleButton4.TabIndex = 37;
+            this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.btnLast.Location = new System.Drawing.Point(461, 222);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(31, 23);
+            this.btnLast.TabIndex = 37;
             // 
-            // simpleButton3
+            // btnNext
             // 
-            this.simpleButton3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(638, 324);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(47, 34);
-            this.simpleButton3.TabIndex = 38;
+            this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnNext.Location = new System.Drawing.Point(425, 222);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(31, 23);
+            this.btnNext.TabIndex = 38;
             // 
-            // simpleButton2
+            // btnPrevious
             // 
-            this.simpleButton2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(585, 324);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(47, 34);
-            this.simpleButton2.TabIndex = 39;
+            this.btnPrevious.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(390, 222);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(31, 23);
+            this.btnPrevious.TabIndex = 39;
             // 
-            // simpleButton1
+            // btnFirst
             // 
-            this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(532, 324);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(47, 34);
-            this.simpleButton1.TabIndex = 40;
+            this.btnFirst.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnFirst.Location = new System.Drawing.Point(355, 222);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(31, 23);
+            this.btnFirst.TabIndex = 40;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // txtNhap
             // 
-            this.txtNhap.Location = new System.Drawing.Point(415, 389);
-            this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNhap.Location = new System.Drawing.Point(277, 266);
             this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(451, 27);
+            this.txtNhap.Size = new System.Drawing.Size(302, 21);
             this.txtNhap.TabIndex = 41;
             this.txtNhap.Text = "Nhập hóa đơn cần tìm...";
             // 
@@ -456,19 +439,19 @@
             this.dateNgayLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateNgayLap.CustomFormat = "dd/MM/yyyy";
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNgayLap.Location = new System.Drawing.Point(636, 128);
+            this.dateNgayLap.Location = new System.Drawing.Point(424, 88);
+            this.dateNgayLap.Margin = new System.Windows.Forms.Padding(2);
             this.dateNgayLap.Name = "dateNgayLap";
-            this.dateNgayLap.Size = new System.Drawing.Size(157, 27);
+            this.dateNgayLap.Size = new System.Drawing.Size(106, 21);
             this.dateNgayLap.TabIndex = 43;
             // 
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(175, 292);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(117, 200);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(127, 53);
+            this.btnThem.Size = new System.Drawing.Size(85, 36);
             this.btnThem.TabIndex = 34;
             this.btnThem.Text = "Thêm sách";
             this.btnThem.Click += new System.EventHandler(this.btnLuu_Click);
@@ -477,17 +460,17 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 684);
+            this.ClientSize = new System.Drawing.Size(816, 468);
             this.Controls.Add(this.dateNgayLap);
             this.Controls.Add(this.txtKhachHang);
             this.Controls.Add(this.txtNhap);
-            this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.btnLast);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnFirst);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnLuu);
@@ -502,7 +485,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmHoaDon";
             this.Text = "frmHoaDon";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
@@ -538,10 +520,10 @@
         private DevExpress.XtraEditors.SimpleButton btnThoat;
         private DevExpress.XtraEditors.SimpleButton btnLuu;
         private DevExpress.XtraEditors.SimpleButton btnSua;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnPrevious;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
         private System.Windows.Forms.TextBox txtNhap;
         private System.Windows.Forms.DateTimePicker dateNgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;

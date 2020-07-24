@@ -54,10 +54,10 @@
             this.btnSua = new DevExpress.XtraEditors.SimpleButton();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLast = new DevExpress.XtraEditors.SimpleButton();
+            this.btnNext = new DevExpress.XtraEditors.SimpleButton();
+            this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSS)).BeginInit();
             this.gTTSach.SuspendLayout();
             this.SuspendLayout();
@@ -320,55 +320,59 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // simpleButton4
+            // btnLast
             // 
-            this.simpleButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.simpleButton4.Location = new System.Drawing.Point(139, 194);
-            this.simpleButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(36, 23);
-            this.simpleButton4.TabIndex = 51;
+            this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.btnLast.Location = new System.Drawing.Point(139, 194);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(36, 23);
+            this.btnLast.TabIndex = 51;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
-            // simpleButton3
+            // btnNext
             // 
-            this.simpleButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(99, 194);
-            this.simpleButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(36, 23);
-            this.simpleButton3.TabIndex = 52;
+            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnNext.Location = new System.Drawing.Point(99, 194);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(36, 23);
+            this.btnNext.TabIndex = 52;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
-            // simpleButton2
+            // btnPrevious
             // 
-            this.simpleButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(59, 194);
-            this.simpleButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(36, 23);
-            this.simpleButton2.TabIndex = 53;
+            this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(59, 194);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(36, 23);
+            this.btnPrevious.TabIndex = 53;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // simpleButton1
+            // btnFirst
             // 
-            this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(19, 194);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(36, 23);
-            this.simpleButton1.TabIndex = 54;
+            this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnFirst.Location = new System.Drawing.Point(19, 194);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(36, 23);
+            this.btnFirst.TabIndex = 54;
+            this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
             // frmNhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 517);
-            this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.btnLast);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
+            this.Controls.Add(this.btnFirst);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
@@ -410,10 +414,10 @@
         private System.Windows.Forms.TextBox txtMaNCC;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnLast;
+        private DevExpress.XtraEditors.SimpleButton btnNext;
+        private DevExpress.XtraEditors.SimpleButton btnPrevious;
+        private DevExpress.XtraEditors.SimpleButton btnFirst;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

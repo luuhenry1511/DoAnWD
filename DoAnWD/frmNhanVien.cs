@@ -155,5 +155,10 @@ namespace DoAnWD
             capnhat = false;
             enaButton();
         }
+
+        private void dgvDSNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -78,7 +78,7 @@ namespace DoAnWD
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTenNCC.Text != "") //kiem tra dieu kien
+            if (txtMaNCC.Text != "") //kiem tra dieu kien
             {
                 NCC.EndCurrentEdit();
                 tblNCC.ghi();
@@ -87,7 +87,7 @@ namespace DoAnWD
             }
             else
             {
-                MessageBox.Show("Vui lòng điền tên sách");
+                MessageBox.Show("Vui lòng điền mã nhà cung cấp");
                 txtTenNCC.Focus();
             }
         }
@@ -101,7 +101,7 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa sách " + txtTenNCC.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa mã sách " + txtMaNCC.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
 
                 NCC.RemoveAt(NCC.Position);
@@ -122,6 +122,28 @@ namespace DoAnWD
             tblNCC.RejectChanges();
             capnhat = false;
             enaButton();
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
+            NCC.Position = 0;
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (NCC.Position > 0)
+                NCC.Position -= 1;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (NCC.Position < NCC.Count - 1)
+                NCC.Position += 1;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            NCC.Position = NCC.Count - 1;
         }
     }
 }

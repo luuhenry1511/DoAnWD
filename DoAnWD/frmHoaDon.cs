@@ -16,7 +16,7 @@ namespace DoAnWD
 {
     public partial class frmHoaDon : DevExpress.XtraEditors.XtraForm
     {
-        public static string cnnStr = "Data Source=DESKTOP-RD7GGH3\\SQLEXPRESS;Initial Catalog=DOAN_WD;Integrated Security=True";
+        public static string cnnStr = "Data Source=NGUYENTHIQUYNH\\SQLEXPRESS;Initial Catalog=DOAN_WD;Integrated Security=True";
         private static SqlConnection _cnn;
         internal string manv;
         XLCTHD tblCTHD;
@@ -135,6 +135,15 @@ namespace DoAnWD
         {
             foreach (DataGridViewRow r in dgvData.Rows)
                 r.Cells[0].Value = r.Index + 1;
+        }
+
+        private void txtMaSach_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnFirst_Click(object sender, EventArgs e)
+        {
         }
 
         private void btnSua_Click(object sender, EventArgs e)

@@ -100,7 +100,7 @@ namespace DoAnWD
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTenSach.Text != "") //kiem tra dieu kien
+            if (maskedMaSach.Text != "") //kiem tra dieu kien
             {
                 SACH.EndCurrentEdit();
                 tblSACH.ghi();
@@ -109,7 +109,7 @@ namespace DoAnWD
             }
             else
             {
-                MessageBox.Show("Vui lòng điền tên sách");
+                MessageBox.Show("Vui lòng điền mã sách");
                 txtTenSach.Focus();
             }
             
@@ -145,7 +145,7 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa sách "+ txtTenSach.Text+ " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa sách "+ maskedMaSach.Text+ " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
                 
                 SACH.RemoveAt(SACH.Position);
