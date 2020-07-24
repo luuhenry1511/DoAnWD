@@ -144,6 +144,29 @@ namespace DoAnWD
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
+            bindCTHD.Position = 0;
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (bindCTHD.Position > 0)
+                bindCTHD.Position -= 1;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (bindCTHD.Position < bindCTHD.Count - 1)
+                bindCTHD.Position += 1;
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            bindCTHD.Position = bindCTHD.Count - 1;
+        }
+
+        private void btnLapHoaDon_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnSua_Click(object sender, EventArgs e)

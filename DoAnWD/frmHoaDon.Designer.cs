@@ -76,7 +76,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(361, 18);
@@ -89,7 +89,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Location = new System.Drawing.Point(339, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
@@ -99,7 +99,7 @@
             // txtNhanVienLap
             // 
             this.txtNhanVienLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNhanVienLap.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.txtNhanVienLap.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtNhanVienLap.Location = new System.Drawing.Point(424, 140);
             this.txtNhanVienLap.Name = "txtNhanVienLap";
             this.txtNhanVienLap.Size = new System.Drawing.Size(100, 21);
@@ -135,6 +135,7 @@
             this.Column5,
             this.Column6,
             this.Xóa});
+            this.dgvData.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvData.Location = new System.Drawing.Point(377, 290);
             this.dgvData.Name = "dgvData";
             this.dgvData.Size = new System.Drawing.Size(45, 157);
@@ -209,7 +210,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Default;
             this.label3.Location = new System.Drawing.Point(339, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
@@ -226,6 +227,7 @@
             this.btnLapHoaDon.Size = new System.Drawing.Size(91, 49);
             this.btnLapHoaDon.TabIndex = 4;
             this.btnLapHoaDon.Text = "Lập hóa đơn";
+            this.btnLapHoaDon.Click += new System.EventHandler(this.btnLapHoaDon_Click);
             // 
             // gThongTin
             // 
@@ -236,6 +238,7 @@
             this.gThongTin.Controls.Add(this.label8);
             this.gThongTin.Controls.Add(this.label7);
             this.gThongTin.Controls.Add(this.label5);
+            this.gThongTin.Cursor = System.Windows.Forms.Cursors.Default;
             this.gThongTin.Location = new System.Drawing.Point(9, 57);
             this.gThongTin.Name = "gThongTin";
             this.gThongTin.Size = new System.Drawing.Size(301, 138);
@@ -246,7 +249,7 @@
             // nudSoLuong
             // 
             this.nudSoLuong.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.nudSoLuong.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.nudSoLuong.Cursor = System.Windows.Forms.Cursors.Default;
             this.nudSoLuong.Location = new System.Drawing.Point(101, 62);
             this.nudSoLuong.Name = "nudSoLuong";
             this.nudSoLuong.Size = new System.Drawing.Size(121, 21);
@@ -255,7 +258,7 @@
             // txtTongTien
             // 
             this.txtTongTien.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTongTien.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.txtTongTien.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtTongTien.Location = new System.Drawing.Point(101, 90);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
@@ -265,7 +268,7 @@
             // txtMaSach
             // 
             this.txtMaSach.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMaSach.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.txtMaSach.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtMaSach.Location = new System.Drawing.Point(101, 36);
             this.txtMaSach.Multiline = true;
             this.txtMaSach.Name = "txtMaSach";
@@ -277,7 +280,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Default;
             this.label8.Location = new System.Drawing.Point(13, 97);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 13);
@@ -288,7 +291,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Default;
             this.label7.Location = new System.Drawing.Point(13, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 13);
@@ -299,7 +302,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Default;
             this.label5.Location = new System.Drawing.Point(13, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
@@ -309,7 +312,7 @@
             // txtKhachHang
             // 
             this.txtKhachHang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtKhachHang.Location = new System.Drawing.Point(424, 165);
             this.txtKhachHang.Multiline = true;
             this.txtKhachHang.Name = "txtKhachHang";
@@ -320,7 +323,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Default;
             this.label4.Location = new System.Drawing.Point(337, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 13);
@@ -331,7 +334,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Default;
             this.label6.Location = new System.Drawing.Point(339, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
@@ -341,7 +344,7 @@
             // txtMaHD
             // 
             this.txtMaHD.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMaHD.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.txtMaHD.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtMaHD.Location = new System.Drawing.Point(424, 116);
             this.txtMaHD.Multiline = true;
             this.txtMaHD.Name = "txtMaHD";
@@ -351,6 +354,7 @@
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
             this.btnThoat.Location = new System.Drawing.Point(680, 119);
             this.btnThoat.Name = "btnThoat";
@@ -362,6 +366,7 @@
             // btnLuu
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
             this.btnLuu.Location = new System.Drawing.Point(571, 168);
             this.btnLuu.Name = "btnLuu";
@@ -373,6 +378,7 @@
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
             this.btnSua.Location = new System.Drawing.Point(680, 57);
             this.btnSua.Name = "btnSua";
@@ -385,40 +391,47 @@
             // 
             this.btnLast.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLast.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.btnLast.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnLast.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.ImageOptions.Image")));
             this.btnLast.Location = new System.Drawing.Point(461, 222);
             this.btnLast.Margin = new System.Windows.Forms.Padding(2);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(31, 23);
             this.btnLast.TabIndex = 37;
+            this.btnLast.Click += new System.EventHandler(this.btnLast_Click);
             // 
             // btnNext
             // 
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btnNext.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnNext.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.ImageOptions.Image")));
             this.btnNext.Location = new System.Drawing.Point(425, 222);
             this.btnNext.Margin = new System.Windows.Forms.Padding(2);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(31, 23);
             this.btnNext.TabIndex = 38;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrevious
             // 
             this.btnPrevious.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnPrevious.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnPrevious.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnPrevious.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.ImageOptions.Image")));
             this.btnPrevious.Location = new System.Drawing.Point(390, 222);
             this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(31, 23);
             this.btnPrevious.TabIndex = 39;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnFirst
             // 
             this.btnFirst.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnFirst.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnFirst.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnFirst.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.ImageOptions.Image")));
             this.btnFirst.Location = new System.Drawing.Point(355, 222);
             this.btnFirst.Margin = new System.Windows.Forms.Padding(2);
             this.btnFirst.Name = "btnFirst";
@@ -428,6 +441,7 @@
             // 
             // txtNhap
             // 
+            this.txtNhap.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtNhap.Location = new System.Drawing.Point(277, 266);
             this.txtNhap.Name = "txtNhap";
             this.txtNhap.Size = new System.Drawing.Size(302, 21);
@@ -437,6 +451,7 @@
             // dateNgayLap
             // 
             this.dateNgayLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateNgayLap.Cursor = System.Windows.Forms.Cursors.Default;
             this.dateNgayLap.CustomFormat = "dd/MM/yyyy";
             this.dateNgayLap.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateNgayLap.Location = new System.Drawing.Point(424, 88);
@@ -448,6 +463,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.Location = new System.Drawing.Point(117, 200);
             this.btnThem.Name = "btnThem";
