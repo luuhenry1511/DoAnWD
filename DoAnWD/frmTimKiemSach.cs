@@ -90,5 +90,11 @@ namespace DoAnWD
             TabPage T = (TabPage)this.Parent;
             T.Dispose();
         }
+
+        private void dgvDSSach_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvDSSach.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
     }
 }

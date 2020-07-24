@@ -77,9 +77,9 @@
             this.label7.Location = new System.Drawing.Point(472, 22);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(265, 29);
+            this.label7.Size = new System.Drawing.Size(269, 29);
             this.label7.TabIndex = 35;
-            this.label7.Text = "QUẢN LÍ NHÂN VIÊN";
+            this.label7.Text = "QUẢN LÝ NHÂN VIÊN";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // dgvDSNhanVien
@@ -97,11 +97,11 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvDSNhanVien.Location = new System.Drawing.Point(176, 438);
+            this.dgvDSNhanVien.Location = new System.Drawing.Point(259, 428);
             this.dgvDSNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSNhanVien.Name = "dgvDSNhanVien";
             this.dgvDSNhanVien.ReadOnly = true;
-            this.dgvDSNhanVien.Size = new System.Drawing.Size(722, 284);
+            this.dgvDSNhanVien.Size = new System.Drawing.Size(620, 284);
             this.dgvDSNhanVien.TabIndex = 33;
             this.dgvDSNhanVien.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvDSNhanVien_DataBindingComplete);
             // 
@@ -410,7 +410,7 @@
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThoat.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.ImageOptions.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(784, 358);
+            this.btnThoat.Location = new System.Drawing.Point(834, 353);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(112, 56);
@@ -422,7 +422,7 @@
             // 
             this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnHuy.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.ImageOptions.Image")));
-            this.btnHuy.Location = new System.Drawing.Point(662, 358);
+            this.btnHuy.Location = new System.Drawing.Point(712, 353);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(112, 56);
@@ -434,7 +434,7 @@
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLuu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.ImageOptions.Image")));
-            this.btnLuu.Location = new System.Drawing.Point(542, 358);
+            this.btnLuu.Location = new System.Drawing.Point(592, 353);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(112, 56);
@@ -446,7 +446,7 @@
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.ImageOptions.Image")));
-            this.btnSua.Location = new System.Drawing.Point(420, 358);
+            this.btnSua.Location = new System.Drawing.Point(470, 353);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 56);
@@ -458,7 +458,7 @@
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(298, 358);
+            this.btnXoa.Location = new System.Drawing.Point(348, 353);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 56);
@@ -470,7 +470,7 @@
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(176, 358);
+            this.btnThem.Location = new System.Drawing.Point(226, 353);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 56);

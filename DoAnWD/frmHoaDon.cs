@@ -131,6 +131,12 @@ namespace DoAnWD
             T.Dispose();
         }
 
+        private void dgvData_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvData.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
+
         private void btnSua_Click(object sender, EventArgs e)
         {
             capnhat = true;

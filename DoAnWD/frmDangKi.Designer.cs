@@ -41,6 +41,7 @@
             this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
             this.cboLoaiTK = new System.Windows.Forms.ComboBox();
             this.txtNhanVien = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -186,6 +187,15 @@
             this.txtNhanVien.TabIndex = 9;
             this.txtNhanVien.TextChanged += new System.EventHandler(this.txtNhanVien_TextChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(59, 96);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(408, 324);
+            this.panel1.TabIndex = 10;
+            // 
             // frmDangKi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -204,6 +214,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDangKi";
             this.Text = "DangKy";
@@ -228,5 +239,6 @@
         private DevExpress.XtraEditors.SimpleButton btnHuy;
         private System.Windows.Forms.ComboBox cboLoaiTK;
         private System.Windows.Forms.TextBox txtNhanVien;
+        private System.Windows.Forms.Panel panel1;
     }
 }

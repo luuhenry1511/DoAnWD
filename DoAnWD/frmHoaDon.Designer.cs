@@ -48,12 +48,12 @@
             this.btnLapHoaDon = new DevExpress.XtraEditors.SimpleButton();
             this.gThongTin = new System.Windows.Forms.GroupBox();
             this.nudSoLuong = new System.Windows.Forms.NumericUpDown();
-            this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.txtMaSach = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtKhachHang = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -64,7 +64,6 @@
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnTempt = new DevExpress.XtraEditors.SimpleButton();
             this.txtNhap = new System.Windows.Forms.TextBox();
             this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -140,11 +139,12 @@
             this.Column5,
             this.Column6,
             this.Xóa});
-            this.dgvData.Location = new System.Drawing.Point(-1, 452);
+            this.dgvData.Location = new System.Drawing.Point(565, 424);
             this.dgvData.Margin = new System.Windows.Forms.Padding(4);
             this.dgvData.Name = "dgvData";
-            this.dgvData.Size = new System.Drawing.Size(1222, 230);
+            this.dgvData.Size = new System.Drawing.Size(67, 230);
             this.dgvData.TabIndex = 6;
+            this.dgvData.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvData_DataBindingComplete);
             // 
             // STT
             // 
@@ -262,17 +262,6 @@
             this.nudSoLuong.Size = new System.Drawing.Size(182, 27);
             this.nudSoLuong.TabIndex = 11;
             // 
-            // txtKhachHang
-            // 
-            this.txtKhachHang.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.txtKhachHang.Location = new System.Drawing.Point(636, 241);
-            this.txtKhachHang.Margin = new System.Windows.Forms.Padding(4);
-            this.txtKhachHang.Multiline = true;
-            this.txtKhachHang.Name = "txtKhachHang";
-            this.txtKhachHang.Size = new System.Drawing.Size(148, 32);
-            this.txtKhachHang.TabIndex = 8;
-            // 
             // txtTongTien
             // 
             this.txtTongTien.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -330,6 +319,17 @@
             this.label5.Size = new System.Drawing.Size(71, 19);
             this.label5.TabIndex = 6;
             this.label5.Text = "Mã sách:";
+            // 
+            // txtKhachHang
+            // 
+            this.txtKhachHang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtKhachHang.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.txtKhachHang.Location = new System.Drawing.Point(636, 241);
+            this.txtKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKhachHang.Multiline = true;
+            this.txtKhachHang.Name = "txtKhachHang";
+            this.txtKhachHang.Size = new System.Drawing.Size(148, 32);
+            this.txtKhachHang.TabIndex = 8;
             // 
             // label4
             // 
@@ -442,20 +442,9 @@
             this.simpleButton1.Size = new System.Drawing.Size(47, 34);
             this.simpleButton1.TabIndex = 40;
             // 
-            // btnTempt
-            // 
-            this.btnTempt.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTempt.ImageOptions.Image")));
-            this.btnTempt.Location = new System.Drawing.Point(620, 398);
-            this.btnTempt.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTempt.Name = "btnTempt";
-            this.btnTempt.Size = new System.Drawing.Size(118, 34);
-            this.btnTempt.TabIndex = 42;
-            this.btnTempt.Text = "Tìm kiếm";
-            this.btnTempt.Click += new System.EventHandler(this.btnTempt_Click);
-            // 
             // txtNhap
             // 
-            this.txtNhap.Location = new System.Drawing.Point(151, 405);
+            this.txtNhap.Location = new System.Drawing.Point(415, 389);
             this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhap.Name = "txtNhap";
             this.txtNhap.Size = new System.Drawing.Size(451, 27);
@@ -475,7 +464,7 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.ImageOptions.Image")));
+            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
             this.btnThem.Location = new System.Drawing.Point(175, 292);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
@@ -493,7 +482,6 @@
             this.ClientSize = new System.Drawing.Size(1224, 684);
             this.Controls.Add(this.dateNgayLap);
             this.Controls.Add(this.txtKhachHang);
-            this.Controls.Add(this.btnTempt);
             this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
@@ -554,7 +542,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton btnTempt;
         private System.Windows.Forms.TextBox txtNhap;
         private System.Windows.Forms.DateTimePicker dateNgayLap;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
