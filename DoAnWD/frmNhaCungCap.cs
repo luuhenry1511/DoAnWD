@@ -53,5 +53,16 @@ namespace DoAnWD
             btnLuu.Enabled = capnhat;
             btnHuy.Enabled = capnhat;
         }
+
+        private void dgvDSS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dgvDSS_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow r in dgvDSS.Rows)
+                r.Cells[0].Value = r.Index + 1;
+        }
     }
 }
