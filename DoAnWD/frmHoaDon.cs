@@ -16,14 +16,10 @@ namespace DoAnWD
 {
     public partial class frmHoaDon : DevExpress.XtraEditors.XtraForm
     {
-        public static string cnnStr = "Data Source=NGUYENTHIQUYNH\\SQLEXPRESS;Initial Catalog=DOAN_WD;Integrated Security=True";
-        private static SqlConnection _cnn;
-        internal string manv;
-        XLCTHD tblCTHD;
-        XLHOADON tblHOADON;
-        BindingManagerBase bindCTHD, bindHD;
-        SqlDataAdapter daHD, daCTHD;
-        bool capnhat = false;
+        DataTable tblSACH, tblHOADON, tblCTHD;
+        SqlDataAdapter daHD, daCTHD, daS;
+        BindingManagerBase bindHD, bindCTHD;
+        bool capnhat;
         public frmHoaDon()
         {
             InitializeComponent();
@@ -32,7 +28,7 @@ namespace DoAnWD
         {
             btnLapHoaDon.Enabled = !capnhat;
             btnSua.Enabled = !capnhat;
-            dgvData.Enabled = capnhat;
+            dgvCTHD.Enabled = capnhat;
             gThongTin.Enabled = capnhat;
             btnLuu.Enabled = capnhat;
             btnHuy.Enabled = capnhat;
@@ -41,89 +37,91 @@ namespace DoAnWD
             txtMaHD.Enabled = capnhat;
             txtKhachHang.Enabled = capnhat;
         }
-        private void simpleButton2_Click(object sender, EventArgs e)        //btn Huy
-        {
-            bindCTHD.CancelCurrentEdit();
-            tblCTHD.RejectChanges();
-            tblHOADON.RejectChanges();
 
-            capnhat = false;
-            enaButton();
-        }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
-            daCTHD = new SqlDataAdapter("Select * from CTHD", cnnStr);
-            daHD = new SqlDataAdapter("Select * From HOADON", cnnStr);
-            dateNgayLap.Value = DateTime.Now;
-            tblCTHD = new XLCTHD();
-            tblHOADON = new XLHOADON();
+            tblCTHD = new DataTable();
+            tblHOADON = new DataTable();
+            tblSACH = new DataTable();
+            daCTHD = new SqlDataAdapter("Select * from CTHD", XLBANG._cnn);
+            daHD = new SqlDataAdapter("Select * from HOADON", XLBANG._cnn);
+            daS= new SqlDataAdapter("Select * from SACH", XLBANG._cnn);
+            try
+            {
+                daCTHD.Fill(tblCTHD);
+                daHD.Fill(tblHOADON);
+                daS.Fill(tblSACH);
 
-            SqlCommandBuilder cmdHD = new SqlCommandBuilder(daHD); //Tao cau noi de cap nhat xuong CSDL
-            SqlCommandBuilder cmdCTHD = new SqlCommandBuilder(daCTHD); //
-
-            manv = txtNhanVienLap.Text;
-            addcol();
-            loadgdvDatachuan();
-            bindHD = this.BindingContext[tblHOADON];
-            dateNgayLap.DataBindings.Add("text", tblCTHD, "NgayLap", true);
-            txtNhanVienLap.DataBindings.Add("text", tblCTHD, "MaNV", true);
-            txtMaHD.DataBindings.Add("text", tblCTHD, "MaHD", true);
-            txtKhachHang.DataBindings.Add("text", tblCTHD, "TenKH", true);
-            txtMaSach.DataBindings.Add("text", tblCTHD, "MaSach", true);
-            nudSoLuong.DataBindings.Add("value", tblCTHD, "Soluong", true);
-            txtTongTien.DataBindings.Add("text", tblCTHD, "Tong", true);
-
-            enaButton();
-
+                //TAO CAU NOI DE CAP NHAT XUONG CSDL
+                SqlCommandBuilder cmdHD = new SqlCommandBuilder(daHD);
+                SqlCommandBuilder cmdCTHD = new SqlCommandBuilder(daCTHD);
+            }catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            loadSACH();
+            addcolCTHD();
+            loadHD();
+            loadCTHD();
         }
 
-        private void loadgdvDatachuan()
+        private void loadHD()
         {
-            
-            bindCTHD = this.BindingContext[tblCTHD];
-            dgvData.AutoGenerateColumns = false;
-            dgvData.DataSource = tblCTHD;
+            bindHD = this.BindingContext[tblHOADON];
+            txtMaHD.DataBindings.Add("text", tblHOADON, "MaHD", true);
+            dateNgayLap.DataBindings.Add("text", tblHOADON, "NgayLap", true);
+            txtNhanVienLap.DataBindings.Add("text", tblHOADON, "MaNV", true);
+            bindHD.PositionChanged += new EventHandler(bdHD_PositionChanged);
+        }
+        private void bdHD_PositionChanged(object sender, EventArgs e)
+        {
+            tblCTHD.DefaultView.RowFilter = "MaHD= '" + txtMaHD.Text + "'";
+            int s = 0;
+            foreach (DataRowView r in tblCTHD.DefaultView)
+            {
+                s += int.Parse(r["ThanhTien"].ToString());
+            }
+            txtTongTien.Text = s.ToString();
         }
 
-        private void addcol()
+        private void loadCTHD()
+        {
+            bindCTHD = this.BindingContext[tblCTHD];
+            dgvCTHD.AutoGenerateColumns = false;
+            dgvCTHD.DataSource = tblCTHD;
+        }
+
+        private void loadSACH()
+        {
+            cbSach.DataSource = tblSACH;
+            cbSach.ValueMember = "MaSach";
+            cbSach.DisplayMember = "TenSach";
+            cbSach.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cbSach.AutoCompleteSource = AutoCompleteSource.ListItems;
+            cbSach.SelectedIndex = -1; //bo chon sach
+        }
+
+        private void addcolCTHD()
         {
             DataSet ds = new DataSet();
-            ds.Tables.AddRange(new DataTable[] { tblCTHD, tblHOADON });
+            ds.Tables.AddRange(new DataTable[] { tblSACH, tblCTHD });
             //tao qh
-            DataRelation qh = new DataRelation("FRK_CTHD_HD", tblHOADON.Columns["MaHD"], tblCTHD.Columns["MaHD"]);
+            DataRelation qh = new DataRelation("FRK_SACH_CTHD", tblSACH.Columns["MaSach"], tblCTHD.Columns["MaSach"]);
             ds.Relations.Add(qh);
             //tao cot phu
-            DataColumn cot_MaNV = new DataColumn("MaNV", Type.GetType("System.String"), "Parent(FRK_CTHD_HD).MaNV");
-            tblCTHD.Columns.Add(cot_MaNV);
+            DataColumn cot_TenSach = new DataColumn("TenSach", Type.GetType("System.String"), "Parent(FRK_SACH_CTHD).TenSach");
+            tblCTHD.Columns.Add(cot_TenSach);
 
-            DataColumn cot_TenKH = new DataColumn("TenKH", Type.GetType("System.String"), "Parent(FRK_CTHD_HD).TenKH");
-            tblCTHD.Columns.Add(cot_TenKH);
+            DataColumn cot_DonGia = new DataColumn("DonGia", Type.GetType("System.String"), "Parent(FRK_SACH_CTHD).DonGia");
+            tblCTHD.Columns.Add(cot_DonGia);
 
-            DataColumn cot_NgayLap = new DataColumn("NgayLap", Type.GetType("System.String"), "Parent(FRK_CTHD_HD).NgayLap");
-            tblCTHD.Columns.Add(cot_NgayLap);
-        }
-        private void loadgdvData()
-        {
-
-            if (_cnn == null)
-                _cnn = new SqlConnection(cnnStr);
-            _cnn.Open();
-            SqlCommand cmd = new SqlCommand("exec ProSelectCTHD "+ txtMaHD.Text +"",_cnn);
-            DataTable data = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(data);
-            dgvData.AutoGenerateColumns = false;
-            dgvData.DataSource = data;
-
-            _cnn.Close();
-    
+            DataColumn cot_ThanhTien = new DataColumn("ThanhTien", Type.GetType("System.String"), "Parent(FRK_SACH_CTHD).DonGia*SoLuong");
+            tblCTHD.Columns.Add(cot_ThanhTien);
         }
 
-    private void btnTempt_Click(object sender, EventArgs e)
-    {
-        loadgdvData();
-    }
+
+
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
@@ -133,7 +131,7 @@ namespace DoAnWD
 
         private void dgvData_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
-            foreach (DataGridViewRow r in dgvData.Rows)
+            foreach (DataGridViewRow r in dgvCTHD.Rows)
                 r.Cells[0].Value = r.Index + 1;
         }
 
@@ -144,24 +142,30 @@ namespace DoAnWD
 
         private void btnFirst_Click(object sender, EventArgs e)
         {
-            bindCTHD.Position = 0;
+            bindHD.Position = 0;
         }
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
-            if (bindCTHD.Position > 0)
-                bindCTHD.Position -= 1;
+            if (bindHD.Position > 0)
+                bindHD.Position -= 1;
+        }
+
+        private void txtNhap_TextChanged(object sender, EventArgs e)
+        {
+            string std = string.Format("MaHD like '%{0}%'", txtNhap.Text);
+            tblCTHD.DefaultView.RowFilter = std;
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (bindCTHD.Position < bindCTHD.Count - 1)
-                bindCTHD.Position += 1;
+            if (bindHD.Position < bindHD.Count - 1)
+                bindHD.Position += 1;
         }
 
         private void btnLast_Click(object sender, EventArgs e)
         {
-            bindCTHD.Position = bindCTHD.Count - 1;
+            bindHD.Position = bindHD.Count - 1;
         }
 
         private void btnLapHoaDon_Click(object sender, EventArgs e)
@@ -178,15 +182,7 @@ namespace DoAnWD
         private void btnLuu_Click(object sender, EventArgs e)
         {
 
-            bindCTHD.EndCurrentEdit();         
-            bindHD.EndCurrentEdit();
-            daCTHD.Update(tblCTHD);
-            daHD.Update(tblHOADON);
-            tblCTHD.AcceptChanges();
-            MessageBox.Show("Cap nhat thanh cong!!");
 
-            capnhat = false;
-            enaButton();
         }
     }
 }

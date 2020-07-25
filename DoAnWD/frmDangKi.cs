@@ -57,15 +57,30 @@ namespace DoAnWD
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            NV.EndCurrentEdit();
-            tblNHANVIEN.ghi();
-            MessageBox.Show("Đăng ký tài khoản thành công!");
+            if (txtMatKhau.Text != txtNhapLaiMK.Text)
+            {
+                MessageBox.Show("Mật khẩu và nhập lại mật khẩu phải trùng khớp nhau!");
+            }
+            else
+            {
+                NV.EndCurrentEdit();
+                tblNHANVIEN.ghi();
+                MessageBox.Show("Đăng ký tài khoản thành công!");
+            }
+
         }
 
         private void txtNhanVien_TextChanged(object sender, EventArgs e)
         {
             string std2 = string.Format("TenNV like '%{0}%'", txtNhanVien.Text);
             tblNHANVIEN.DefaultView.RowFilter = std2;
+        }
+
+        private void checkBoxhienmk_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxhienmk.Checked) txtMatKhau.UseSystemPasswordChar = false;
+
+            else txtMatKhau.UseSystemPasswordChar = true;
         }
     }
 }

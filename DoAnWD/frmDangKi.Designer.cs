@@ -42,6 +42,8 @@
             this.cboLoaiTK = new System.Windows.Forms.ComboBox();
             this.txtNhanVien = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBoxhienmk = new System.Windows.Forms.CheckBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -76,6 +78,7 @@
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(148, 27);
             this.txtMatKhau.TabIndex = 5;
+            this.txtMatKhau.UseSystemPasswordChar = true;
             // 
             // label5
             // 
@@ -109,6 +112,7 @@
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.Size = new System.Drawing.Size(148, 27);
             this.txtNhapLaiMK.TabIndex = 5;
+            this.txtNhapLaiMK.UseSystemPasswordChar = true;
             // 
             // btnDangKy
             // 
@@ -191,10 +195,22 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.checkBoxhienmk);
             this.panel1.Location = new System.Drawing.Point(59, 96);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(408, 324);
             this.panel1.TabIndex = 10;
+            // 
+            // checkBoxhienmk
+            // 
+            this.checkBoxhienmk.AutoSize = true;
+            this.checkBoxhienmk.Location = new System.Drawing.Point(386, 203);
+            this.checkBoxhienmk.Name = "checkBoxhienmk";
+            this.checkBoxhienmk.Size = new System.Drawing.Size(109, 23);
+            this.checkBoxhienmk.TabIndex = 0;
+            this.checkBoxhienmk.Text = "checkBox1";
+            this.checkBoxhienmk.UseVisualStyleBackColor = true;
+            this.checkBoxhienmk.CheckedChanged += new System.EventHandler(this.checkBoxhienmk_CheckedChanged);
             // 
             // frmDangKi
             // 
@@ -219,6 +235,8 @@
             this.Name = "frmDangKi";
             this.Text = "DangKy";
             this.Load += new System.EventHandler(this.frmDangKi_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +258,6 @@
         private System.Windows.Forms.ComboBox cboLoaiTK;
         private System.Windows.Forms.TextBox txtNhanVien;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox checkBoxhienmk;
     }
 }
