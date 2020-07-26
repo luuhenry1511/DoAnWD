@@ -20,6 +20,7 @@ namespace DoAnWD
         SqlDataAdapter daHD, daCTHD, daS;
         BindingManagerBase bindHD, bindCTHD;
         bool capnhat;
+        internal string maNV;
         public frmHoaDon()
         {
             InitializeComponent();
@@ -28,19 +29,23 @@ namespace DoAnWD
         {
             btnLapHoaDon.Enabled = !capnhat;
             btnSua.Enabled = !capnhat;
+            btnXoa.Enabled = !capnhat;
             dgvCTHD.Enabled = capnhat;
             gThongTin.Enabled = capnhat;
             btnLuu.Enabled = capnhat;
             btnHuy.Enabled = capnhat;
+            btnThem.Enabled = capnhat;
+
             dateNgayLap.Enabled = capnhat;
-            txtNhanVienLap.Enabled = false;
-            txtMaHD.Enabled = capnhat;
             txtKhachHang.Enabled = capnhat;
+            txtNhanVienLap.Enabled = false;
+            txtMaHD.Enabled = false; 
         }
 
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            maNV = txtNhanVienLap.Text;
             tblCTHD = new DataTable();
             tblHOADON = new DataTable();
             tblSACH = new DataTable();
@@ -64,14 +69,19 @@ namespace DoAnWD
             addcolCTHD();
             loadHD();
             loadCTHD();
+
+            capnhat = false;
+            enaButton();
+   
         }
 
         private void loadHD()
         {
             bindHD = this.BindingContext[tblHOADON];
             txtMaHD.DataBindings.Add("text", tblHOADON, "MaHD", true);
-            dateNgayLap.DataBindings.Add("text", tblHOADON, "NgayLap", true);
+            dateNgayLap.DataBindings.Add("value", tblHOADON, "NgayLap", true);
             txtNhanVienLap.DataBindings.Add("text", tblHOADON, "MaNV", true);
+            txtKhachHang.DataBindings.Add("text", tblHOADON, "TenKH", true);
             bindHD.PositionChanged += new EventHandler(bdHD_PositionChanged);
         }
         private void bdHD_PositionChanged(object sender, EventArgs e)
@@ -151,6 +161,106 @@ namespace DoAnWD
                 bindHD.Position -= 1;
         }
 
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                bindHD.EndCurrentEdit();
+                daHD.Update(tblHOADON);
+                tblHOADON.AcceptChanges();
+
+                bindCTHD.EndCurrentEdit();
+                daCTHD.Update(tblCTHD);
+                tblCTHD.AcceptChanges();
+                MessageBox.Show("Cập Nhật Thành Công!!!");
+                capnhat = false;
+                enaButton();
+            }
+            catch (SqlException ex)
+            {
+                tblCTHD.RejectChanges();
+                tblHOADON.RejectChanges();
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            
+            if (cbSach.SelectedIndex == -1)
+            {
+                MessageBox.Show("Chưa chọn quyển sách nào!");
+                return;
+            }
+
+            int count = tblCTHD.Select("MaHD = '" + txtMaHD.Text + "' and MaSach='" + cbSach.SelectedValue + "'").Count();
+            if (count > 0)
+            {
+                MessageBox.Show("Quyển sách này đã có trong hóa đơn!");
+                return;
+            }
+            DataRow r = tblCTHD.NewRow();
+            r["MaSach"] = cbSach.SelectedValue;
+            r["MaHD"] = txtMaHD.Text;
+            r["SoLuong"] = nudSoLuong.Value;
+
+            tblCTHD.Rows.Add(r);
+            bdHD_PositionChanged(sender, e);
+
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            bindCTHD.CancelCurrentEdit();
+            tblCTHD.RejectChanges();
+
+            bindHD.CancelCurrentEdit();
+            tblHOADON.RejectChanges();
+            bdHD_PositionChanged(sender, e);
+            capnhat = false;
+            enaButton();
+
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var rows = tblCTHD.Select("MaHD = '" + txtMaHD.Text + "'");
+                foreach (DataRow r in rows)
+                    r.Delete();
+                daCTHD.Update(tblCTHD);
+                tblCTHD.AcceptChanges();
+                MessageBox.Show("Đã xóa");
+            }
+            catch (SqlException ex)
+            {
+                tblCTHD.RejectChanges();
+                tblHOADON.RejectChanges();
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void dgvCTHD_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex>=0 && e.ColumnIndex==6)
+            {
+                try {
+                        bindCTHD.RemoveAt(bindCTHD.Position);
+                        daCTHD.Update(tblCTHD);
+                        tblCTHD.AcceptChanges();
+                    }
+                catch
+                {
+                    tblCTHD.RejectChanges();
+                    MessageBox.Show("Xóa thất bại!");
+                }
+            }
+        }
+
         private void txtNhap_TextChanged(object sender, EventArgs e)
         {
             string std = string.Format("MaHD like '%{0}%'", txtNhap.Text);
@@ -170,6 +280,24 @@ namespace DoAnWD
 
         private void btnLapHoaDon_Click(object sender, EventArgs e)
         {
+            bindHD.AddNew();
+            dateNgayLap.Value = DateTime.Now;
+            txtNhanVienLap.Text = maNV;
+            txtKhachHang.Text = "Guest";
+            try
+            {
+                SqlCommand cmm = new SqlCommand("Select dbo.fn_CreateMaHD()", XLBANG._cnn);
+                XLBANG._cnn.Open();
+                txtMaHD.Text = cmm.ExecuteScalar().ToString();
+                capnhat = true;
+                enaButton();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            XLBANG._cnn.Close();
 
         }
 
@@ -179,10 +307,6 @@ namespace DoAnWD
             enaButton();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-
-        }
+ 
     }
 }
