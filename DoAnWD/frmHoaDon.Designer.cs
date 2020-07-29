@@ -39,7 +39,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Xóa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLapHoaDon = new DevExpress.XtraEditors.SimpleButton();
@@ -134,7 +134,7 @@
             this.Column2,
             this.Column4,
             this.Column5,
-            this.Column6,
+            this.Column3,
             this.Xóa});
             this.dgvCTHD.Cursor = System.Windows.Forms.Cursors.Default;
             this.dgvCTHD.Location = new System.Drawing.Point(431, 424);
@@ -156,6 +156,7 @@
             this.Column1.DataPropertyName = "MaCTHD";
             this.Column1.HeaderText = "Mã CTHD";
             this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
             // 
             // Column2
             // 
@@ -168,7 +169,7 @@
             this.Column4.DataPropertyName = "TenSach";
             this.Column4.HeaderText = "Tên sách";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
+            this.Column4.Width = 300;
             // 
             // Column5
             // 
@@ -176,11 +177,11 @@
             this.Column5.HeaderText = "Số lượng";
             this.Column5.Name = "Column5";
             // 
-            // Column6
+            // Column3
             // 
-            this.Column6.DataPropertyName = "Tong";
-            this.Column6.HeaderText = "Tổng tiền";
-            this.Column6.Name = "Column6";
+            this.Column3.DataPropertyName = "ThanhTien";
+            this.Column3.HeaderText = "Thành tiền";
+            this.Column3.Name = "Column3";
             // 
             // Xóa
             // 
@@ -482,6 +483,7 @@
             this.btnIn.Size = new System.Drawing.Size(136, 54);
             this.btnIn.TabIndex = 46;
             this.btnIn.Text = "In Hóa Đơn";
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnThem
             // 
@@ -568,16 +570,16 @@
         private System.Windows.Forms.TextBox txtNhap;
         private System.Windows.Forms.DateTimePicker dateNgayLap;
         private System.Windows.Forms.ComboBox cbSach;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnIn;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewButtonColumn Xóa;
-        private System.Windows.Forms.Label label9;
-        private DevExpress.XtraEditors.SimpleButton btnXoa;
-        private DevExpress.XtraEditors.SimpleButton btnIn;
-        private DevExpress.XtraEditors.SimpleButton btnThem;
     }
 }

@@ -261,6 +261,14 @@ namespace DoAnWD
             }
         }
 
+        private void btnIn_Click(object sender, EventArgs e)
+        {
+            InHD f = new InHD();
+            f.MaHD = txtMaHD.Text;
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+        }
+
         private void txtNhap_TextChanged(object sender, EventArgs e)
         {
             string std = string.Format("MaHD like '%{0}%'", txtNhap.Text);
