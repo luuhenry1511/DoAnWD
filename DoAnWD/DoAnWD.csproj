@@ -69,6 +69,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataHD.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataTK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataTK.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frmDangKi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +115,12 @@
     </Compile>
     <Compile Include="frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTK.Designer.cs">
+      <DependentUpon>frmTK.cs</DependentUpon>
     </Compile>
     <Compile Include="InHD.cs">
       <SubType>Form</SubType>
@@ -164,6 +175,18 @@
       <DependentUpon>rptHoaDon.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptThongKe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptThongKe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Thongkedt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thongkedt.Designer.cs">
+      <DependentUpon>Thongkedt.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmDangKi.resx">
       <DependentUpon>frmDangKi.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +211,9 @@
     <EmbeddedResource Include="frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmTK.resx">
+      <DependentUpon>frmTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InHD.resx">
       <DependentUpon>InHD.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +235,13 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptHoaDon.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptThongKe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptThongKe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thongkedt.resx">
+      <DependentUpon>Thongkedt.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="DataHD.xsc">
       <DependentUpon>DataHD.xsd</DependentUpon>
@@ -220,6 +253,17 @@
     </None>
     <None Include="DataHD.xss">
       <DependentUpon>DataHD.xsd</DependentUpon>
+    </None>
+    <None Include="DataTK.xsc">
+      <DependentUpon>DataTK.xsd</DependentUpon>
+    </None>
+    <None Include="DataTK.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataTK.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataTK.xss">
+      <DependentUpon>DataTK.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

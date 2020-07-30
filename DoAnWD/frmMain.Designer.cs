@@ -143,11 +143,12 @@
             // 
             // btnDoanhThu
             // 
-            this.btnDoanhThu.Caption = "Doanh thu";
+            this.btnDoanhThu.Caption = "Thống kê";
             this.btnDoanhThu.Id = 10;
             this.btnDoanhThu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.Image")));
             this.btnDoanhThu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnDoanhThu.ImageOptions.LargeImage")));
             this.btnDoanhThu.Name = "btnDoanhThu";
+            this.btnDoanhThu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDoanhThu_ItemClick);
             // 
             // barButtonItem9
             // 

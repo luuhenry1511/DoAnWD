@@ -216,5 +216,26 @@ namespace DoAnWD
                 f.Show();
             }
         }
+
+        private void btnDoanhThu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int index = tabControlMain.TabPages.IndexOfKey("ThongKe");
+            if (index >= 0)
+                tabControlMain.SelectedIndex = index;
+            else
+            {
+                Thongkedt f = new Thongkedt();
+                TabPage p = new TabPage(f.Text);
+                p.Name = "ThongKe";
+                f.TopLevel = false;
+                p.Controls.Add(f);
+                f.Dock = DockStyle.Fill;
+                f.FormBorderStyle = FormBorderStyle.None;
+                tabControlMain.TabPages.Add(p);
+                tabControlMain.SelectedTab = p;
+
+                f.Show();
+            }
+        }
     }
 }
