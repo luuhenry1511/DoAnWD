@@ -39,7 +39,8 @@ namespace DoAnWD
             dateNgayLap.Enabled = capnhat;
             txtKhachHang.Enabled = capnhat;
             txtNhanVienLap.Enabled = false;
-            txtMaHD.Enabled = false; 
+            txtMaHD.Enabled = false;
+            txtTongTien.Enabled = false;
         }
 
 

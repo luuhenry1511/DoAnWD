@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DoAnWD.Moduls;
+using System.Data.SqlClient;
 
 namespace DoAnWD
 {
@@ -37,6 +38,7 @@ namespace DoAnWD
             btnLuu.Enabled = capnhat;
             btnHuy.Enabled = capnhat;
 
+            txtMaNV.Enabled = false;
         }
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
@@ -118,7 +120,21 @@ namespace DoAnWD
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            NHANVIEN.AddNew(); 
+            NHANVIEN.AddNew();
+            try
+            {
+                SqlCommand cmm = new SqlCommand("Select dbo.fn_CreateMaNV()", XLBANG._cnn);
+                XLBANG._cnn.Open();
+                txtMaNV.Text = cmm.ExecuteScalar().ToString();
+                capnhat = true;
+                enaButton();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            XLBANG._cnn.Close();
             capnhat = true;
             enaButton();
         }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DoAnWD.Moduls;
-
+using System.Data.SqlClient;
 namespace DoAnWD
 {
     public partial class frmNhaCungCap : DevExpress.XtraEditors.XtraForm
@@ -52,6 +52,8 @@ namespace DoAnWD
             gTTSach.Enabled = capnhat;
             btnLuu.Enabled = capnhat;
             btnHuy.Enabled = capnhat;
+
+            txtMaNCC.Enabled = false;
         }
 
         private void dgvDSS_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,13 +97,28 @@ namespace DoAnWD
         private void btnThem_Click(object sender, EventArgs e)
         {
             NCC.AddNew();
+
+            try
+            {
+                SqlCommand cmm = new SqlCommand("Select dbo.fn_CreateMaNCC()", XLBANG._cnn);
+                XLBANG._cnn.Open();
+                txtMaNCC.Text = cmm.ExecuteScalar().ToString();
+                capnhat = true;
+                enaButton();
+            }
+
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            XLBANG._cnn.Close();
             capnhat = true;
             enaButton();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa mã NCC " + txtMaNCC.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa NCC " + txtTenNCC.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
 
                 NCC.RemoveAt(NCC.Position);
