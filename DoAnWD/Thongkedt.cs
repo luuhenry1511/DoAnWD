@@ -34,12 +34,28 @@ namespace DoAnWD
             cboThang.Items.Add("11");
             cboThang.Items.Add("12");
 
+            cbNam.Items.Add("2018");
+            cbNam.Items.Add("2019");
+            cbNam.Items.Add("2020");
         }
 
         private void btnXem_Click(object sender, EventArgs e)
         {
+            if (cboThang.Text=="")
+            {
+                MessageBox.Show("Mời chọn tháng");
+                cboThang.Select();
+                return;
+            }
+            if (cbNam.Text == "")
+            {
+                MessageBox.Show("Mời chọn năm");
+                cboThang.Focus();
+                return;
+            }
             frmTK f = new frmTK();
             f.Thang = cboThang.Text;
+            f.Nam = cbNam.Text;
             f.WindowState = FormWindowState.Maximized;
             f.Show();
         }

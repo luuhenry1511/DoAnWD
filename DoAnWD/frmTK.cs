@@ -16,6 +16,7 @@ namespace DoAnWD
     public partial class frmTK : Form
     {
         public string Thang;
+        public string Nam;
         public frmTK()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace DoAnWD
             var query = "SELECT HOADON.MaHD, SUM(CTHD.Soluong) AS SL, HOADON.NgayLap, SUM(CTHD.Soluong * SACH.DonGia) AS ThanhTien " +
                     "FROM CTHD INNER JOIN HOADON ON CTHD.MaHD = HOADON.MaHD INNER JOIN" +
              " SACH ON CTHD.MaSach = SACH.MaSach" +
-             " where MONTH(HOADON.NgayLap)= " + Thang +
+             " where MONTH(HOADON.NgayLap)= " + Thang + "AND YEAR(HOADON.NgayLap)= "+Nam+
                 " GROUP BY HOADON.MaHD, HOADON.NgayLap ";
                 
             SqlDataAdapter da = new SqlDataAdapter(query, XLBANG._cnn);

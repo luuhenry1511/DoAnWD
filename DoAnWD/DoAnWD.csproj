@@ -131,6 +131,9 @@
     <Compile Include="Moduls\XLBANG.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Moduls\XLPHIEUNHAP.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Moduls\XLLOAITK.cs">
       <SubType>Component</SubType>
     </Compile>

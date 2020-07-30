@@ -19,6 +19,7 @@ namespace DoAnWD
 
         BindingManagerBase NHANVIEN;
         bool capnhat = false;
+
         public frmNhanVien()
         {
             InitializeComponent();
@@ -121,6 +122,7 @@ namespace DoAnWD
         private void btnThem_Click(object sender, EventArgs e)
         {
             NHANVIEN.AddNew();
+            txtTen.Focus();
             try
             {
                 SqlCommand cmm = new SqlCommand("Select dbo.fn_CreateMaNV()", XLBANG._cnn);
@@ -141,27 +143,49 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Bạn có muốn xóa nhân viên " + txtTen.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
 
-                NHANVIEN.RemoveAt(NHANVIEN.Position);
-                tblNHANVIEN.ghi();
-                MessageBox.Show("Xóa thành công!");
+                    DataTable kttt = new DataTable(); // kttt kiểm tra thông tin có trong bảng khác không???
+
+                    string sql = "select * from HOADON where MaNV= '" + txtMaNV.Text + "'";
+                    kttt = new XLHOADON(sql);
+                    int i = kttt.Rows.Count;
+                    if (i > 0)
+                        MessageBox.Show("Nhân viên " + txtTen.Text + " có trong bảng Hóa đơn!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        NHANVIEN.RemoveAt(NHANVIEN.Position);
+                        tblNHANVIEN.ghi();
+                        MessageBox.Show("Xóa thành công!");
+                    }
+
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             capnhat = true;
+
             enaButton();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            NHANVIEN.EndCurrentEdit();
-            tblNHANVIEN.ghi();
-            capnhat = false;
-            enaButton();
+            if (txtTen.Text != "") //kiem tra dieu kien
+            {
+                NHANVIEN.EndCurrentEdit();
+                tblNHANVIEN.ghi();
+                capnhat = false;
+                enaButton();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng điền tên nhân viên");
+                txtTen.Focus();
+            }
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

@@ -164,7 +164,6 @@ namespace DoAnWD
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
             try
             {
                 bindHD.EndCurrentEdit();
@@ -270,11 +269,6 @@ namespace DoAnWD
             f.Show();
         }
 
-        private void txtNhap_TextChanged(object sender, EventArgs e)
-        {
-            string std = string.Format("MaHD like '%{0}%'", txtNhap.Text);
-            tblCTHD.DefaultView.RowFilter = std;
-        }
 
         private void btnNext_Click(object sender, EventArgs e)
         {

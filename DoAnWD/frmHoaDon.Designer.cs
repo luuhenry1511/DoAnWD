@@ -61,9 +61,7 @@
             this.btnNext = new DevExpress.XtraEditors.SimpleButton();
             this.btnPrevious = new DevExpress.XtraEditors.SimpleButton();
             this.btnFirst = new DevExpress.XtraEditors.SimpleButton();
-            this.txtNhap = new System.Windows.Forms.TextBox();
             this.dateNgayLap = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
             this.btnIn = new DevExpress.XtraEditors.SimpleButton();
             this.btnThem = new DevExpress.XtraEditors.SimpleButton();
@@ -137,7 +135,7 @@
             this.Column3,
             this.Xóa});
             this.dgvCTHD.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dgvCTHD.Location = new System.Drawing.Point(431, 424);
+            this.dgvCTHD.Location = new System.Drawing.Point(452, 406);
             this.dgvCTHD.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCTHD.Name = "dgvCTHD";
             this.dgvCTHD.Size = new System.Drawing.Size(203, 229);
@@ -433,16 +431,6 @@
             this.btnFirst.TabIndex = 40;
             this.btnFirst.Click += new System.EventHandler(this.btnFirst_Click);
             // 
-            // txtNhap
-            // 
-            this.txtNhap.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtNhap.Location = new System.Drawing.Point(386, 375);
-            this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(248, 27);
-            this.txtNhap.TabIndex = 41;
-            this.txtNhap.TextChanged += new System.EventHandler(this.txtNhap_TextChanged);
-            // 
             // dateNgayLap
             // 
             this.dateNgayLap.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -453,15 +441,6 @@
             this.dateNgayLap.Name = "dateNgayLap";
             this.dateNgayLap.Size = new System.Drawing.Size(157, 27);
             this.dateNgayLap.TabIndex = 43;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(172, 387);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(199, 19);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Nhập mã hóa đơn cần tìm:";
             // 
             // btnXoa
             // 
@@ -506,10 +485,8 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.dateNgayLap);
             this.Controls.Add(this.txtKhachHang);
-            this.Controls.Add(this.txtNhap);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
@@ -567,10 +544,8 @@
         private DevExpress.XtraEditors.SimpleButton btnNext;
         private DevExpress.XtraEditors.SimpleButton btnPrevious;
         private DevExpress.XtraEditors.SimpleButton btnFirst;
-        private System.Windows.Forms.TextBox txtNhap;
         private System.Windows.Forms.DateTimePicker dateNgayLap;
         private System.Windows.Forms.ComboBox cbSach;
-        private System.Windows.Forms.Label label9;
         private DevExpress.XtraEditors.SimpleButton btnXoa;
         private DevExpress.XtraEditors.SimpleButton btnIn;
         private DevExpress.XtraEditors.SimpleButton btnThem;

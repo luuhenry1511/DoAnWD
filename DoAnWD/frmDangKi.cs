@@ -31,10 +31,13 @@ namespace DoAnWD
             tblNHANVIEN = new XLNHANVIEN();
             tblLOAITK = new XLLOAITK();
             loadcboLoaiTK();
+            txtMaNV.DataBindings.Add("text", tblNHANVIEN, "MaNV", true);
             txtUsername.DataBindings.Add("text", tblNHANVIEN, "UserName", true);
             cboLoaiTK.DataBindings.Add("SelectedValue", tblNHANVIEN, "MaLTK", true);
             txtMatKhau.DataBindings.Add("text", tblNHANVIEN, "Password", true);
 
+            txtNhanVien.Focus();
+            txtMaNV.Enabled = false;
             NV= this.BindingContext[tblNHANVIEN];
         }
 
@@ -81,6 +84,11 @@ namespace DoAnWD
             if (checkBoxhienmk.Checked) txtMatKhau.UseSystemPasswordChar = false;
 
             else txtMatKhau.UseSystemPasswordChar = true;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

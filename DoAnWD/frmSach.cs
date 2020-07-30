@@ -20,6 +20,7 @@ namespace DoAnWD
         XLKESACH tblKESACH;
         BindingManagerBase SACH;
         bool capnhat = false;
+        bool insert = false;
         public frmSach()
         {
             InitializeComponent();
@@ -91,8 +92,9 @@ namespace DoAnWD
         private void btnThem_Click(object sender, EventArgs e)
         {
             SACH.AddNew();
-
+            maskedMaSach.Focus();
             capnhat = true;
+            insert = true;
             enaButton();
             
             
@@ -100,7 +102,16 @@ namespace DoAnWD
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (maskedMaSach.Text != "") //kiem tra dieu kien
+            if (insert)
+            {
+                int count = tblSACH.Select("MaSach = '" + maskedMaSach.Text + "'").Count();
+                if (count > 0)
+                {
+                    MessageBox.Show("Mã sách đã tồn tại");
+                    return;
+                }
+            }
+            if (txtTenSach.Text != "") //kiem tra dieu kien
             {
                 SACH.EndCurrentEdit();
                 tblSACH.ghi();
@@ -109,7 +120,7 @@ namespace DoAnWD
             }
             else
             {
-                MessageBox.Show("Vui lòng điền mã sách");
+                MessageBox.Show("Vui lòng điền tên sách");
                 txtTenSach.Focus();
             }
             
@@ -147,16 +158,27 @@ namespace DoAnWD
         {
             if (MessageBox.Show("Bạn có muốn xóa sách "+ maskedMaSach.Text+ " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                
-                SACH.RemoveAt(SACH.Position);
-                tblSACH.ghi();
-                MessageBox.Show("Xóa thành công!");
+
+                DataTable kttt = new DataTable(); 
+                string sql = "select * from HOADON where MaSach= '" + maskedMaSach.Text + "'";
+                kttt = new XLHOADON(sql);
+                int i = kttt.Rows.Count;
+                if (i > 0)
+                    MessageBox.Show("Đầu sách " + txtTenSach.Text + " đã có số lượng bán!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    SACH.RemoveAt(SACH.Position);
+                    tblSACH.ghi();
+                    MessageBox.Show("Xóa thành công!");
+                }
+
             }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             capnhat = true;
+            insert = false;
             enaButton();
         }
 

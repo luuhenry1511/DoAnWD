@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DoAnWD.Moduls;
 using System.Data.SqlClient;
+
 namespace DoAnWD
 {
     public partial class frmNhaCungCap : DevExpress.XtraEditors.XtraForm
@@ -80,7 +81,7 @@ namespace DoAnWD
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaNCC.Text != "") //kiem tra dieu kien
+            if (txtTenNCC.Text != "") //kiem tra dieu kien
             {
                 NCC.EndCurrentEdit();
                 tblNCC.ghi();
@@ -89,7 +90,7 @@ namespace DoAnWD
             }
             else
             {
-                MessageBox.Show("Vui lòng điền mã nhà cung cấp");
+                MessageBox.Show("Vui lòng điền tên nhà cung cấp");
                 txtTenNCC.Focus();
             }
         }
@@ -97,7 +98,7 @@ namespace DoAnWD
         private void btnThem_Click(object sender, EventArgs e)
         {
             NCC.AddNew();
-
+            txtTenNCC.Focus();
             try
             {
                 SqlCommand cmm = new SqlCommand("Select dbo.fn_CreateMaNCC()", XLBANG._cnn);
@@ -118,12 +119,23 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+
             if (MessageBox.Show("Bạn có muốn xóa NCC " + txtTenNCC.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
+                DataTable kttt = new DataTable(); // kttt kiểm tra thông tin có trong bảng khác không???
 
-                NCC.RemoveAt(NCC.Position);
-                tblNCC.ghi();
-                MessageBox.Show("Xóa thành công!");
+                string sql = "select * from PHIEUNHAP where MaNCC= '" + txtMaNCC.Text + "'";
+                kttt = new XLPHIEUNHAP(sql);
+                int i = kttt.Rows.Count;
+                if (i > 0)
+                    MessageBox.Show("Nhà cung cấp  " + txtTenNCC.Text + " có trong bảng Phiếu nhập!", "Error !!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    NCC.RemoveAt(NCC.Position);
+                    tblNCC.ghi();
+                    MessageBox.Show("Xóa thành công!");
+                }
+
             }
         }
 
