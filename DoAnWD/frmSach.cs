@@ -110,7 +110,9 @@ namespace DoAnWD
                     MessageBox.Show("Mã sách đã tồn tại");
                     return;
                 }
+
             }
+
             if (txtTenSach.Text != "") //kiem tra dieu kien
             {
                 SACH.EndCurrentEdit();
@@ -156,11 +158,11 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa sách "+ maskedMaSach.Text+ " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Bạn có muốn xóa sách "+ txtTenSach.Text+ " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
 
                 DataTable kttt = new DataTable(); 
-                string sql = "select * from HOADON where MaSach= '" + maskedMaSach.Text + "'";
+                string sql = "select * from CTHD where MaSach= '" + maskedMaSach.Text + "'";
                 kttt = new XLHOADON(sql);
                 int i = kttt.Rows.Count;
                 if (i > 0)

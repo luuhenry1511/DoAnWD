@@ -60,6 +60,18 @@ namespace DoAnWD
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            if (txtUsername.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập Username!");
+                txtUsername.Focus();
+                return;
+            }
+            if (txtMatKhau.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập mật khẩu!");
+                txtMatKhau.Focus();
+                return;
+            }
             if (txtMatKhau.Text != txtNhapLaiMK.Text)
             {
                 MessageBox.Show("Mật khẩu và nhập lại mật khẩu phải trùng khớp nhau!");

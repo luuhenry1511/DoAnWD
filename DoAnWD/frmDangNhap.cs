@@ -31,6 +31,11 @@ namespace DoAnWD
         {
             tblNhanVien = new XLNHANVIEN();
             DataRow[] r = tblNhanVien.Select("Username='" + txtTenDangNhap.Text + "' and Password = '" + txtMatKhau.Text + "'");
+            if (txtTenDangNhap.Text=="" || txtMatKhau.Text=="")
+            {
+                MessageBox.Show("Vui lòng điền tên đăng nhập và mật khẩu!");
+                return;
+            }
             if (r.Count() > 0)
             {
                 frmMain f = (frmMain)this.MdiParent;
@@ -41,7 +46,7 @@ namespace DoAnWD
                 this.Close();
             }
             else
-                MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!!!");
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!!!");
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

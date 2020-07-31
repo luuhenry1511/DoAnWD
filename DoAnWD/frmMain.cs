@@ -33,6 +33,16 @@ namespace DoAnWD
         {
             switch (maLTK)
             {
+                case 0: //tai khoan quan tri
+                    btnDangXuat.Enabled = true;
+                    btnDangKy.Enabled = true;
+                    btnNhanVien.Enabled = true;
+                    btnThongTinSach.Enabled = true;
+                    btnSach.Enabled = true;
+                    btnDonHang.Enabled = true;
+                    btnNCC.Enabled = true;
+                    btnDoanhThu.Enabled = true;
+                    break;
                 case 1: //chu tiem
                     btnDangXuat.Enabled = true;
                     btnDangKy.Enabled = true;
