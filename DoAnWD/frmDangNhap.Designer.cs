@@ -148,6 +148,8 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageStore = global::DoAnWD.Properties.Resources.nen;
             this.ClientSize = new System.Drawing.Size(555, 362);
             this.Controls.Add(this.btnQuentk);
             this.Controls.Add(this.txtMatKhau);

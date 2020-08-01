@@ -37,6 +37,8 @@ namespace DoAnWD
             cbNam.Items.Add("2018");
             cbNam.Items.Add("2019");
             cbNam.Items.Add("2020");
+            cbNam.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cbNam.AutoCompleteSource = AutoCompleteSource.ListItems;
         }
 
         private void btnXem_Click(object sender, EventArgs e)

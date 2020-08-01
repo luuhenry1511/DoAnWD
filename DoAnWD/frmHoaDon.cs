@@ -226,21 +226,28 @@ namespace DoAnWD
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Bạn có muốn xóa hóa đơn " + txtMaHD.Text + " không?", "DELETE", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                var rows = tblCTHD.Select("MaHD = '" + txtMaHD.Text + "'");
-                foreach (DataRow r in rows)
-                    r.Delete();
-                daCTHD.Update(tblCTHD);
-                tblCTHD.AcceptChanges();
-                MessageBox.Show("Đã xóa");
+                
+                {
+                    try
+                    {
+                        var rows = tblCTHD.Select("MaHD = '" + txtMaHD.Text + "'");
+                        foreach (DataRow r in rows)
+                            r.Delete();
+                        daCTHD.Update(tblCTHD);
+                        tblCTHD.AcceptChanges();
+                        MessageBox.Show("Đã xóa");
+                    }
+                    catch (SqlException ex)
+                    {
+                        tblCTHD.RejectChanges();
+                        tblHOADON.RejectChanges();
+                        MessageBox.Show(ex.ToString());
+                    }
+                }
             }
-            catch (SqlException ex)
-            {
-                tblCTHD.RejectChanges();
-                tblHOADON.RejectChanges();
-                MessageBox.Show(ex.ToString());
-            }
+
 
         }
 
